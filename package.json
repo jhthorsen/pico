@@ -1,14 +1,14 @@
 {
-  "name": "@picocss/pico",
+  "name": "zeptocss",
   "version": "1.5.7",
   "description": "Minimal CSS Framework for semantic HTML",
   "author": "Lucas Larroche",
   "main": "css/pico.min.css",
-  "homepage": "https://picocss.com",
+  "homepage": "https://github.com/jhthorsen/zeptocss",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/picocss/pico.git"
+    "url": "git+https://github.com/jhthorsen/zeptocss.git"
   },
   "keywords": [
     "css",
@@ -24,7 +24,7 @@
     "semantic"
   ],
   "bugs": {
-    "url": "https://github.com/picocss/pico/issues"
+    "url": "https://github.com/jhthorsen/zeptocss/issues"
   },
   "scripts": {
     "watch": "npm-run-all --parallel watch:pico watch:docs:scss watch:docs:html watch:docs:js --silent",
