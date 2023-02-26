@@ -64,7 +64,7 @@
     "Segoe UI Symbol", "Noto Color Emoji";
   --line-height: 1.5;
   --font-weight: 400;
-  --font-size: 16px;
+  --font-size: clamp(16px, 2vw, 20px);
 
   --border-radius: 0.25rem;
   --border-width: 1px;
@@ -92,40 +92,6 @@
 
 small {
   --font-size: 0.875em;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  --font-weight: 700;
-}
-
-h1 {
-  --font-size: 2rem;
-  --typography-spacing-vertical: 3rem;
-}
-
-h2 {
-  --font-size: 1.75rem;
-  --typography-spacing-vertical: 2.625rem;
-}
-
-h3 {
-  --font-size: 1.5rem;
-  --typography-spacing-vertical: 2.25rem;
-}
-
-h4 {
-  --font-size: 1.25rem;
-  --typography-spacing-vertical: 1.874rem;
-}
-
-h5 {
-  --font-size: 1.125rem;
-  --typography-spacing-vertical: 1.6875rem;
 }
 
 [type="checkbox"],
