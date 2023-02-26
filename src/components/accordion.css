@@ -17,11 +17,9 @@ details {
       color: var(--accordion-close-summary-color);
     }
 
-    @if $enable-transitions {
-      transition: color var(--transition);
-    }
+    transition: color var(--transition);
 
-    // Reset marker
+    /* Reset marker */
     &::-webkit-details-marker {
       display: none;
     }
@@ -34,7 +32,7 @@ details {
       list-style-type: none;
     }
 
-    // Marker
+    /* Marker */
     &::after {
       display: block;
       width: 1rem;
@@ -48,9 +46,7 @@ details {
       background-repeat: no-repeat;
       content: "";
 
-      @if $enable-transitions {
-        transition: transform var(--transition);
-      }
+      transition: transform var(--transition);
     }
 
     &:focus {
@@ -61,30 +57,28 @@ details {
       }
     }
 
-    // Type button
+    /* Type button */
     &[role="button"] {
       width: 100%;
       text-align: left;
 
-      // Marker
+      /* Marker */
       &::after {
         height: calc(1rem * var(--line-height, 1.5));
         background-image: var(--icon-chevron-button);
       }
 
-      @if $enable-classes {
-        // .contrast
-        &:not(.outline).contrast {
-          // Marker
-          &::after {
-            background-image: var(--icon-chevron-button-inverse);
-          }
+      /* .contrast */
+      &:not(.outline).contrast {
+        /* Marker */
+        &::after {
+          background-image: var(--icon-chevron-button-inverse);
         }
       }
     }
   }
 
-  // Open
+  /* Open */
   &[open] {
     > summary {
       margin-bottom: calc(var(--spacing));

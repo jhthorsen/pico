@@ -37,7 +37,7 @@
     pointer-events: none;
   }
   
-  // Caret
+  /* Caret */
   &[data-placement="top"]::after,
   &::after {
     padding: 0;
@@ -100,7 +100,7 @@
     }
   }
 
-  // Display
+  /* Display */
   &:focus,
   &:hover {
     &::before,
@@ -110,169 +110,166 @@
   }
 
   
-  @if $enable-transitions {
+  /* Animations, excluding touch devices */
+  @media (hover: hover) and (pointer: fine) {
+    &[data-placement="bottom"]:focus,
+    &[data-placement="bottom"]:hover
+    &:focus,
+    &:hover {
+      &::before,
+      &::after {
+        animation-duration: .2s;
+        animation-name: tooltip-slide-top;
+      }
 
-    // Animations, excluding touch devices
-    @media (hover: hover) and (pointer: fine) {
-      &[data-placement="bottom"]:focus,
-      &[data-placement="bottom"]:hover
+      &::after {
+        animation-name: tooltip-caret-slide-top; 
+      }
+    }
+    
+    &[data-placement="bottom"] {
       &:focus,
       &:hover {
         &::before,
         &::after {
           animation-duration: .2s;
-          animation-name: tooltip-slide-top;
+          animation-name: tooltip-slide-bottom;
         }
-
+  
         &::after {
-          animation-name: tooltip-caret-slide-top; 
-        }
-      }
-      
-      &[data-placement="bottom"] {
-        &:focus,
-        &:hover {
-          &::before,
-          &::after {
-            animation-duration: .2s;
-            animation-name: tooltip-slide-bottom;
-          }
-  
-          &::after {
-            animation-name: tooltip-caret-slide-bottom; 
-          }
-        }
-      }
-      
-      &[data-placement="left"] {
-        &:focus,
-        &:hover {
-          &::before,
-          &::after {
-            animation-duration: .2s;
-            animation-name: tooltip-slide-left;
-          }
-  
-          &::after {
-            animation-name: tooltip-caret-slide-left; 
-          }
-        }
-      }
-      
-      &[data-placement="right"] {
-        &:focus,
-        &:hover {
-          &::before,
-          &::after {
-            animation-duration: .2s;
-            animation-name: tooltip-slide-right;
-          }
-  
-          &::after {
-            animation-name: tooltip-caret-slide-right; 
-          }
+          animation-name: tooltip-caret-slide-bottom; 
         }
       }
     }
+    
+    &[data-placement="left"] {
+      &:focus,
+      &:hover {
+        &::before,
+        &::after {
+          animation-duration: .2s;
+          animation-name: tooltip-slide-left;
+        }
+  
+        &::after {
+          animation-name: tooltip-caret-slide-left; 
+        }
+      }
+    }
+    
+    &[data-placement="right"] {
+      &:focus,
+      &:hover {
+        &::before,
+        &::after {
+          animation-duration: .2s;
+          animation-name: tooltip-slide-right;
+        }
+  
+        &::after {
+          animation-name: tooltip-caret-slide-right; 
+        }
+      }
+    }
+  }
+}
 
-    @keyframes tooltip-slide-top {
-      from {
-        transform: translate(-50%, .75rem);
-        opacity: 0;
-      }
-      to {
-        transform: translate(-50%, -.25rem);
-        opacity: 1;
-      }
-    }
-    
-    @keyframes tooltip-caret-slide-top {
-      from {
-        opacity: 0;
-      }
-      50% {
-        transform: translate(-50%, -.25rem);
-        opacity: 0;
-      }
-      to {
-        transform: translate(-50%, 0rem);
-        opacity: 1;
-      }
-    }
-  
-    @keyframes tooltip-slide-bottom {
-      from {
-        transform: translate(-50%, -.75rem);
-        opacity: 0;
-      }
-      to {
-        transform: translate(-50%, .25rem);
-        opacity: 1;
-      }
-    }
-    
-    @keyframes tooltip-caret-slide-bottom {
-      from {
-        opacity: 0;
-      }
-      50% {
-        transform: translate(-50%, -.5rem);
-        opacity: 0;
-      }
-      to {
-        transform: translate(-50%, -.3rem);
-        opacity: 1;
-      }
-    }
-  
-    @keyframes tooltip-slide-left {
-      from {
-        transform: translate(.75rem, -50%);
-        opacity: 0;
-      }
-      to {
-        transform: translate(-.25rem, -50%);
-        opacity: 1;
-      }
-    }
-    
-    @keyframes tooltip-caret-slide-left {
-      from {
-        opacity: 0;
-      }
-      50% {
-        transform: translate(.05rem, -50%);
-        opacity: 0;
-      }
-      to {
-        transform: translate(.3rem, -50%);
-        opacity: 1;
-      }
-    }
-  
-    @keyframes tooltip-slide-right {
-      from {
-        transform: translate(-.75rem, -50%);
-        opacity: 0;
-      }
-      to {
-        transform: translate(.25rem, -50%);
-        opacity: 1;
-      }
-    }
-    
-    @keyframes tooltip-caret-slide-right {
-      from {
-        opacity: 0;
-      }
-      50% {
-        transform: translate(-.05rem, -50%);
-        opacity: 0;
-      }
-      to {
-        transform: translate(-.3rem, -50%);
-        opacity: 1;
-      }
-    }
+@keyframes tooltip-slide-top {
+  from {
+    transform: translate(-50%, .75rem);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -.25rem);
+    opacity: 1;
+  }
+}
+
+@keyframes tooltip-caret-slide-top {
+  from {
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, -.25rem);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0rem);
+    opacity: 1;
+  }
+}
+
+@keyframes tooltip-slide-bottom {
+  from {
+    transform: translate(-50%, -.75rem);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, .25rem);
+    opacity: 1;
+  }
+}
+
+@keyframes tooltip-caret-slide-bottom {
+  from {
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, -.5rem);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -.3rem);
+    opacity: 1;
+  }
+}
+
+@keyframes tooltip-slide-left {
+  from {
+    transform: translate(.75rem, -50%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-.25rem, -50%);
+    opacity: 1;
+  }
+}
+
+@keyframes tooltip-caret-slide-left {
+  from {
+    opacity: 0;
+  }
+  50% {
+    transform: translate(.05rem, -50%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(.3rem, -50%);
+    opacity: 1;
+  }
+}
+
+@keyframes tooltip-slide-right {
+  from {
+    transform: translate(-.75rem, -50%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(.25rem, -50%);
+    opacity: 1;
+  }
+}
+
+@keyframes tooltip-caret-slide-right {
+  from {
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-.05rem, -50%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-.3rem, -50%);
+    opacity: 1;
   }
 }

@@ -3,9 +3,9 @@
  * Alternatives input types (Not Checkboxes & Radios)
  */
 
-// Color
+/* Color */
 [type="color"] {
-  // Wrapper
+  /* Wrapper */
   @mixin color-wrapper {
     padding: 0;
   }
@@ -18,7 +18,7 @@
     @include color-wrapper;
   }
 
-  // Swatch
+  /* Swatch */
   @mixin color-swatch {
     border: 0;
     border-radius: calc(var(--border-radius) * 0.5);
@@ -33,8 +33,8 @@
   }
 }
 
-// Date & Time
-// :not() are needed to add Specificity and avoid !important on padding
+/* Date & Time */
+/* :not() are needed to add Specificity and avoid !important on padding */
 input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]) {
   &:is([type="date"], [type="datetime-local"], [type="month"], [type="time"], [type="week"]) {
     --icon-position: 0.75rem;
@@ -46,13 +46,13 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]) {
     background-repeat: no-repeat;
   }
 
-  // Time
+  /* Time */
   &[type="time"] {
     background-image: var(--icon-time);
   }
 }
 
-// Calendar picker
+/* Calendar picker */
 [type="date"],
 [type="datetime-local"],
 [type="month"],
@@ -71,7 +71,7 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]) {
   text-align: right;
 }
 
-// File
+/* File */
 [type="file"] {
   --color: var(--muted-color);
   padding: calc(var(--form-element-spacing-vertical) * 0.5) 0;
@@ -101,11 +101,9 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]) {
     text-align: center;
     cursor: pointer;
 
-    @if $enable-transitions {
-      transition: background-color var(--transition),
-        border-color var(--transition), color var(--transition),
-        box-shadow var(--transition);
-    }
+    transition: background-color var(--transition),
+      border-color var(--transition), color var(--transition),
+      box-shadow var(--transition);
 
     &:is(:hover, :active, :focus) {
       --background-color: var(--secondary-hover);
@@ -126,32 +124,29 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]) {
   }
 }
 
-// Range
+/* Range */
 [type="range"] {
-  // Config
-  $height-track: 0.25rem;
-  $height-thumb: 1.25rem;
-  $border-thumb: 2px;
+  /* Config */
+  --height-track: 0.25rem;
+  --height-thumb: 1.25rem;
+  --border-thumb: 2px;
 
-  // Styles
+  /* Styles */
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   width: 100%;
-  height: $height-thumb;
+  height: var(--height-thumb);
   background: none;
 
-  // Slider Track
+  /* Slider Track */
   @mixin slider-track {
     width: 100%;
-    height: $height-track;
+    height: var(--height-track);
     border-radius: var(--border-radius);
     background-color: var(--range-border-color);
-
-    @if $enable-transitions {
-      transition: background-color var(--transition),
-        box-shadow var(--transition);
-    }
+    transition: background-color var(--transition),
+      box-shadow var(--transition);
   }
 
   &::-webkit-slider-runnable-track {
@@ -166,21 +161,18 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]) {
     @include slider-track;
   }
 
-  // Slider Thumb
+  /* Slider Thumb */
   @mixin slider-thumb {
     -webkit-appearance: none;
-    width: $height-thumb;
-    height: $height-thumb;
-    margin-top: #{(-($height-thumb * 0.5) + ($height-track * 0.5))};
-    border: $border-thumb solid var(--range-thumb-border-color);
+    width: var(--height-thumb);
+    height: var(--height-thumb);
+    margin-top: calc(-var(--height-thumb) * 0.5) + var(--height-track) * 0.5));
+    border: var(--border-thumb) solid var(--range-thumb-border-color);
     border-radius: 50%;
     background-color: var(--range-thumb-color);
     cursor: pointer;
-
-    @if $enable-transitions {
-      transition: background-color var(--transition),
-        transform var(--transition);
-    }
+    transition: background-color var(--transition),
+      transform var(--transition);
   }
   &::-webkit-slider-thumb {
     @include slider-thumb;
@@ -203,7 +195,7 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]) {
   &:active {
     --range-thumb-color: var(--range-thumb-active-color);
 
-    // Slider Thumb
+    /* Slider Thumb */
     &::-webkit-slider-thumb {
       transform: scale(1.25);
     }
@@ -218,8 +210,8 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]) {
   }
 }
 
-// Search
-// :not() are needed to add Specificity and avoid !important on padding
+/* Search */
+/* :not() are needed to add Specificity and avoid !important on padding */
 input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]) {
   &[type="search"] {
     padding-inline-start: calc(var(--form-element-spacing-horizontal) + 1.75rem);
@@ -230,12 +222,6 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]) {
     background-repeat: no-repeat;
     
     &[aria-invalid] {
-      @if $enable-important {
-        padding-inline-start: calc(var(--form-element-spacing-horizontal) + 1.75rem) !important;
-      } 
-      @else {
-        padding-inline-start: calc(var(--form-element-spacing-horizontal) + 1.75rem);
-      }
       background-position: center left 1.125rem, center right 0.75rem;
     }
 
@@ -249,7 +235,7 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]) {
   }
 }
 
-// Cancel button
+/* Cancel button */
 [type="search"] {
   &::-webkit-search-cancel-button {
     -webkit-appearance: none;

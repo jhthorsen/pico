@@ -2,13 +2,12 @@
  * Loading ([aria-busy=true])
  */
 
-
-// Cursor
+/* Cursor */
 [aria-busy="true"] {
   cursor: progress;
 }
 
-// Everyting except form elements
+/* Everyting except form elements */
 [aria-busy="true"]:not(input, select, textarea) {
 
   &::before {
@@ -20,7 +19,7 @@
     border-right-color: transparent;
     content: "";
     vertical-align: text-bottom;
-    vertical-align: -.125em; // Visual alignment
+    vertical-align: -.125em; /* Visual alignment */
     animation: spinner 0.75s linear infinite;
     opacity: var(--loading-spinner-opacity);
   }
@@ -39,7 +38,7 @@
   }
 }
 
-// Buttons and links
+/* Buttons and links */
 button,
 input[type="submit"],
 input[type="button"],
@@ -50,7 +49,7 @@ a {
   }
 }
 
-// Animation: rotate
+/* Animation: rotate */
 @keyframes spinner {
   to {
     transform: rotate(360deg);

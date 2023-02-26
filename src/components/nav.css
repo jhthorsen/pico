@@ -2,19 +2,19 @@
  * Nav
  */
 
-// Reboot based on :
-// - sanitize.css v13.0.0 | CC0 1.0 Universal | github.com/csstools/sanitize.css
+/* Reboot based on : */
+/* - sanitize.css v13.0.0 | CC0 1.0 Universal | github.com/csstools/sanitize.css */
 
-// Prevent VoiceOver from ignoring list semantics in Safari (opinionated)
+/* Prevent VoiceOver from ignoring list semantics in Safari (opinionated) */
 :where(nav li)::before {
   float: left;
   content: "\200B";
 }
 
-// Pico
-// ––––––––––––––––––––
+/* Pico */
+/* –––––––––––––––––––– */
 
-// Horizontal Nav
+/* Horizontal Nav */
 nav,
 nav ul {
   display: flex;
@@ -44,7 +44,7 @@ nav {
     padding: var(--nav-element-spacing-vertical)
       var(--nav-element-spacing-horizontal);
 
-    // Minimal support for buttons and forms elements
+    /* Minimal support for buttons and forms elements */
     > * {
       --spacing: 0;
     }
@@ -63,7 +63,7 @@ nav {
     }
   }
 
-  // Breadcrumb
+  /* Breadcrumb */
   &[aria-label="breadcrumb"] {
     align-items: center;
     justify-content: start;
@@ -93,7 +93,7 @@ nav {
     }
   }
 
-  // Minimal support for role="button"
+  /* Minimal support for role="button" */
   [role="button"] {
     margin-right: inherit;
     margin-left: inherit;
@@ -101,7 +101,7 @@ nav {
   }
 }
 
-// Vertical Nav
+/* Vertical Nav */
 aside {
   nav,
   ol,
@@ -118,14 +118,14 @@ aside {
       display: block;
     }
 
-    // Minimal support for links as buttons
+    /* Minimal support for links as buttons */
     [role="button"] {
       margin: inherit;
     }
   }
 }
 
-// Breadcrumb RTL
+/* Breadcrumb RTL */
 [dir="rtl"] {
   nav {
     &[aria-label="breadcrumb"] {

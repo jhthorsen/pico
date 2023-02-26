@@ -1,41 +1,32 @@
-/*!
- * Pico.css v1.5.7 (https://picocss.com)
- * Copyright 2019-2023 - Licensed under MIT
- */
+@import "themes/default/index.css";
+@import "themes/default/light.css";
+@import "themes/default/dark.css";
 
-@import "themes/default";
+@import "layout/document.css";
+@import "layout/sectioning.css";
+@import "layout/container.css";
+@import "layout/section.css";
+@import "layout/grid.css";
+@import "layout/scroller.css";
 
-/*
-@import "layout/document";
-@import "layout/sectioning";
-@import "layout/container";
-@import "layout/section";
-@import "layout/grid";
-@import "layout/scroller";
+@import "content/typography.css";
+@import "content/embedded.css";
+@import "content/button.css";
+@import "content/form.css";
+@import "content/form-checkbox-radio.css";
+@import "content/form-alt-input-types.css";
+@import "content/table.css";
+@import "content/code.css";
+@import "content/miscs.css";
 
-@import "content/typography";
-@import "content/embedded";
-@import "content/button";
-@import "content/form";
-@import "content/form-checkbox-radio";
-@import "content/form-alt-input-types";
-@import "content/table";
-@import "content/code";
-@import "content/miscs";
+@import "components/accordion.css";
+@import "components/card.css";
+@import "components/modal.css";
+@import "components/nav.css";
+@import "components/progress.css";
+@import "components/dropdown.css";
 
-@import "components/accordion";
-@import "components/card";
-@import "components/modal";
-@import "components/nav";
-@import "components/progress";
-@import "components/dropdown";
-
-@import "utilities/loading";
-@import "utilities/tooltip";
-@import "utilities/accessibility";
-@import "utilities/reduce-motion";
-*/
-
-body {
-  background: red;
-}
+@import "utilities/loading.css";
+@import "utilities/tooltip.css";
+@import "utilities/accessibility.css";
+@import "utilities/reduce-motion.css";

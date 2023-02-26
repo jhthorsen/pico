@@ -2,7 +2,7 @@
  * Horizontal scroller (<figure>)
  */
 
-// Wrapper to make any content responsive across all viewports
+/* Wrapper to make any content responsive across all viewports */
 figure {
   display: block;
   margin: 0;
