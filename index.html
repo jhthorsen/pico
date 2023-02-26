@@ -36,44 +36,194 @@
     </ul>
   </nav>
 
-  <main>
-    <article>
-      <h1>Main article heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae sunt igitur communia vobis cum antiquis, iis sic utamur quasi concessis; Nihil acciderat ei, quod nollet, nisi quod anulum, quo delectabatur, in mari abiecerat. Unum est sine dolore esse, alterum cum voluptate. Laboro autem non sine causa; Theophrasti igitur, inquit, tibi liber ille placet de beata vita? Nihil opus est exemplis hoc facere longius. Duo Reges constructio interrete. Graecum enim hunc versum nostis omnes Suavis laborum est praeteritorum memoria. Haec et tu ita posuisti, et verba vestra sunt.</p>
+  <main class="container">
+    <aside>
+      <h1>PicoPostCSS</h1>
+    </aside>
+    <div role="document">
+      <article>
+        <h1>PicoPostCSS</h1>
+        <p>Nos commodius agimus. A mene tu? Tantum dico, magis fuisse vestrum agere Epicuri diem natalem, quam illius testamento cavere ut ageretur. Tenesne igitur, inquam, Hieronymus Rhodius quid dicat esse summum bonum, quo putet omnia referri oportere? Nihilo beatiorem esse Metellum quam Regulum. Sed quanta sit alias, nunc tantum possitne esse tanta. Philosophi autem in suis lectulis plerumque moriuntur. Esse enim, nisi eris, non potes.</p>
+      </article>
 
-      <h2>Article secondary heading</h2>
-      <p>Nos commodius agimus. A mene tu? Tantum dico, magis fuisse vestrum agere Epicuri diem natalem, quam illius testamento cavere ut ageretur. Tenesne igitur, inquam, Hieronymus Rhodius quid dicat esse summum bonum, quo putet omnia referri oportere? Nihilo beatiorem esse Metellum quam Regulum. Sed quanta sit alias, nunc tantum possitne esse tanta. Philosophi autem in suis lectulis plerumque moriuntur. Esse enim, nisi eris, non potes.</p>
-      <p>Sunt enim quasi prima elementa naturae, quibus ubertas orationis adhiberi vix potest, nec equidem eam cogito consectari. Id Sextilius factum negabat. Quorum sine causa fieri nihil putandum est. Quae autem natura suae primae institutionis oblita est?</p>
-    </article>
+      <article>
+        <h1>Elements</h1>
+
+        <section>
+          <h2>Typography</h2>
+          <h3>Headings</h3>
+          <h3>Heading 3</h3>
+          <h4>Heading 4</h4>
+          <h5>Heading 5</h5>
+          <h6>Heading 6</h6>
+
+          <h3>Inline text elements</h3>
+          <div class="grid"><div><p><abbr title="Abbreviation">Abbr.</abbr> <code>abbr</code></p><p><strong>Bold</strong> <code>strong</code> <code>b</code></p><p><em>Italic</em> <code>i</code> <code>em</code> <code>cite</code></p><p><del>Deleted</del> <code>del</code></p><p><ins>Inserted</ins> <code>ins</code></p><p><kbd>Ctrl + S</kbd> <code>kbd</code></p></div><div><p><mark>Highlighted</mark> <code>mark</code></p><p><s>Strikethrough</s> <code>s</code></p><p><small>Small </small><code>small</code></p><p>Text <sub>Sub</sub> <code>sub</code></p><p>Text <sup>Sup</sup> <code>sup</code></p><p><u>Underline</u> <code>u</code></p></div></div>
+
+          <h3>Blockquote</h3>
+          <blockquote>
+            "Maecenas vehicula metus tellus, vitae congue turpis hendrerit non.
+            Nam at dui sit amet ipsum cursus ornare."
+            <footer>
+              <cite>- Phasellus eget lacinia</cite>
+            </footer>
+          </blockquote>
+        </section>
+
+        <section>
+          <h2>Buttons</h2>
+          <button>Button</button>
+          <input type="submit">
+
+          <h3>Links</h3>
+          <a href="#" role="button">Link</a>
+          <a href="#" role="button">Link</a>
+
+          <h3>With classes</h3>
+          <a href="#" role="button" class="secondary">Secondary</a>
+          <a href="#" role="button" class="contrast">Contrast</a>
+          <a href="#" role="button" class="outline">Primary</a>
+          <a href="#" role="button" class="secondary outline">Secondary</a>
+          <a href="#" role="button" class="contrast outline">Contrast</a>
+        </section>
+
+        <section>
+          <h2>Forms</h2>
+          <form>
+            <div class="grid">
+              <label for="firstname">
+                First name
+                <input type="text" id="firstname" name="firstname" placeholder="First name" required>
+              </label>
+              <label for="lastname">
+                Last name
+                <input type="text" id="lastname" name="lastname" placeholder="Last name" required>
+              </label>
+            </div>
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="Email address" required>
+            <small>We'll never share your email with anyone else.</small>
+            <button type="submit">Submit</button>
+          </form>
+
+          <h3>Disabled and validation states</h3>
+          <input type="text" placeholder="Valid" aria-invalid="false">
+          <input type="text" placeholder="Invalid" aria-invalid="true">
+          <input type="text" placeholder="Disabled" disabled>
+          <input type="text" value="Readonly" readonly>
+
+          <h3>Select, switch, ...</h3>
+          <label for="fruit">Fruit</label>
+          <select id="fruit" required>
+            <option value="" selected>Select a fruit…</option>
+            <option>…</option>
+          </select>
+
+          <fieldset>
+            <legend>Size</legend>
+            <label for="small">
+              <input type="radio" id="small" name="size" value="small" checked>
+              Small
+            </label>
+            <label for="medium">
+              <input type="radio" id="medium" name="size" value="medium">
+              Medium
+            </label>
+            <label for="large">
+              <input type="radio" id="large" name="size" value="large">
+              Large
+            </label>
+            <label for="extralarge">
+              <input type="radio" id="extralarge" name="size" value="extralarge" disabled>
+              Extra Large
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <label for="terms">
+              <input type="checkbox" id="terms" name="terms">
+              I agree to the Terms and Conditions
+            </label>
+            <label for="terms_sharing">
+              <input type="checkbox" id="terms_sharing" name="terms_sharing" disabled checked>
+              I agree to share my information with partners
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <label for="switch">
+              <input type="checkbox" id="switch" name="switch" role="switch">
+              Publish on my profile
+            </label>
+            <label for="switch_disabled">
+              <input type="checkbox" id="switch_disabled" name="switch_disabled" role="switch_disabled" disabled checked>
+              User must change password at next logon
+            </label>
+          </fieldset>
+
+          <h3>Other inputs</h3>
+          <input type="search" id="search" name="search" placeholder="Search">
+          <label for="file">File browser <input type="file" id="file" name="file"></label>
+          <label for="range">Range slider <input type="range" min="0" max="100" value="50" id="range" name="range"></label>
+          <label for="date">Date <input type="date" id="date" name="date"></label>
+          <label for="time">Time <input type="time" id="time" name="time"></label>
+          <label for="color">Color <input type="color" id="color" name="color" value="#0eaaaa"></label>
+        </section>
+
+        <section>
+          <h2>Tables</h2>
+          <table role="grid">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th scope="col">#</th>
+                <td scope="col">Total</td>
+                <td scope="col">Total</td>
+                <td scope="col">Total</td>
+                <td scope="col">Total</td>
+                <td scope="col">Total</td>
+              </tr>
+            </tfoot>
+          </table>
+        </section>
+      </article>
+    </div>
   </main>
-
-  <aside>
-    <section>
-      <h2>Share</h2>
-      <ul>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Email</a></li>
-      </ul>
-    </section>
-    <section>
-      <h2>Recommended</h2>
-      <ul>
-        <li>
-          <article>
-            <h3><a href="#">Related article</a></h3>
-            <p>Article description</p>
-          </article>
-        </li>
-        <li>
-          <article>
-            <h3><a href="#">Related article</a></h3>
-            <p>Article description</p>
-          </article>
-        </li>
-      </ul>
-    </section>
-  </aside>
 
   <footer>
     <ul>
