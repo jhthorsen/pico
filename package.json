@@ -27,7 +27,7 @@
     "url": "https://github.com/jhthorsen/zeptocss/issues"
   },
   "scripts": {
-    "build": "vite build",
+    "build": "vite build --outDir docs",
     "dev": "vite",
     "preview": "vite preview"
   },
