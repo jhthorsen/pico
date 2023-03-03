@@ -1,0 +1,30 @@
+body {
+  --content-padding-top: 7rem;
+  padding-top: var(--content-padding-top);
+}
+
+body > main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing);
+  padding-inline: var(--spacing);
+
+  & > * {
+    flex: 1 1 70%;
+  }
+
+  & > aside {
+    flex: 1 1 12em;
+  }
+}
+
+body > main > aside {
+  nav {
+    position: sticky;
+    top: var(--content-padding-top);
+  }
+
+  ul {
+    padding-left: .25rem;
+  }
+}

@@ -46,3 +46,9 @@
   cursor: default; /* 1 */
   tab-size: 4; /* 4 */
 }
+
+/* 1. Remove the margin in all browsers (opinionated) */
+body {
+  width: 100%;
+  margin: 0; /* 1 */
+}

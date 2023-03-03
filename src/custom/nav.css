@@ -1,0 +1,26 @@
+nav[aria-label="Primary"] {
+  backdrop-filter: var(--nav-backdrop-filter, saturate(180%) blur(20px));
+  background-color: var(--nav-background-color, rgba(0, 0, 0, 0.4));
+  padding-inline: var(--spacing);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+
+  form {
+    padding: 0;
+    margin: 0;
+    width: 7.3em;
+    transition: width 200ms ease-in;
+    transform-origin: right;
+
+    &:focus-within {
+      width: 15em;
+    }
+  }
+
+  input[type="search"] {
+    --form-element-spacing-vertical: var(--nav-link-spacing-vertical);
+  }
+}
