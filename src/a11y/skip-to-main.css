@@ -1,0 +1,30 @@
+/*
+ * Skip to main content button
+ *
+ * https://webaim.org/techniques/skipnav/
+ * https://www.youtube.com/watch?v=jDDaOFr9nqQ
+ *
+ * <body><header><a href="#main"></a>...</header>...</body>
+ */
+
+.skip-nav-link {
+  background: var(--skip-nav-link-background-color, var(--primary));
+  color: var(--skip-nav-link-color, var(--primary-inverse));
+  text-decoration: none;
+  padding: var(--form-element-spacing-vertical) var(--form-element-spacing-horizontal);
+  border: var(--border-width) solid var(--skip-nav-link-color, var(--primary-inverse));
+  border-top: 0;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  position: absolute;
+  left: var(--spacing);
+  top: 0;
+  transform: translateY(-120%);
+  overflow: hidden;
+
+  &:focus {
+    transition: transform 250ms ease-in;
+    transform: translateY(0);
+    z-index: 1000;
+  }
+}

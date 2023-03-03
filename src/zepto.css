@@ -27,6 +27,8 @@
 @import "components/progress.css";
 @import "components/dropdown.css";
 
+@import "a11y/skip-to-main.css";
+
 @import "utilities/loading.css";
 @import "utilities/tooltip.css";
 @import "utilities/accessibility.css";
