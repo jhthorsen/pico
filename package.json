@@ -47,6 +47,7 @@
     "postcss-load-config": "^4.0.1",
     "postcss-nested": "^6.0.1",
     "postcss-preset-env": "^8.0.1",
+    "postcss-pseudo-shorthand": "^0.2.1",
     "rollup": "^3.11.0",
     "uglify-js": "^3.17.4",
     "vite": "^4.1.4"
