@@ -3,33 +3,18 @@
  * Alternatives input types (Not Checkboxes & Radios)
  */
 
+/* 1. Expanded using "postcss-pseudo-shorthand" */
+/* 2. Icon is added using var(--icon-search) */
+
 /* Color */
 [type="color"] {
-  /* Wrapper */
-  @mixin color-wrapper {
+  &::color-swatch-wrapper { /* 1 */
     padding: 0;
   }
 
-  &::-webkit-color-swatch-wrapper {
-    @include color-wrapper;
-  }
-
-  &::-moz-focus-inner {
-    @include color-wrapper;
-  }
-
-  /* Swatch */
-  @mixin color-swatch {
+  &::color-swatch { /* 1 */
     border: 0;
     border-radius: calc(var(--border-radius) * 0.5);
-  }
-
-  &::-webkit-color-swatch {
-    @include color-swatch;
-  }
-
-  &::-moz-color-swatch {
-    @include color-swatch;
   }
 }
 
@@ -79,7 +64,7 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]) {
   border-radius: 0;
   background: none;
 
-  @mixin file-selector-button {
+  &::file-selector-button { /* 1 */
     --background-color: var(--secondary);
     --border-color: var(--secondary);
     --color: var(--secondary-inverse);
@@ -110,18 +95,6 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]) {
       --border-color: var(--secondary-hover);
     }
   }
-
-  &::file-selector-button {
-    @include file-selector-button;
-  }
-
-  &::-webkit-file-upload-button {
-    @include file-selector-button;
-  }
-
-  &::-ms-browse {
-    @include file-selector-button;
-  }
 }
 
 /* Range */
@@ -139,8 +112,7 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]) {
   height: var(--height-thumb);
   background: none;
 
-  /* Slider Track */
-  @mixin slider-track {
+  &::range-track { /* 1 */
     width: 100%;
     height: var(--height-track);
     border-radius: var(--border-radius);
@@ -149,41 +121,17 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]) {
       box-shadow var(--transition);
   }
 
-  &::-webkit-slider-runnable-track {
-    @include slider-track;
-  }
-
-  &::-moz-range-track {
-    @include slider-track;
-  }
-
-  &::-ms-track {
-    @include slider-track;
-  }
-
-  /* Slider Thumb */
-  @mixin slider-thumb {
+  &::range-thumb { /* 1 */
     -webkit-appearance: none;
     width: var(--height-thumb);
     height: var(--height-thumb);
-    margin-top: calc(-var(--height-thumb) * 0.5) + var(--height-track) * 0.5));
+    margin-top: calc(-var(--height-thumb) * 0.5 + var(--height-track) * 0.5);
     border: var(--border-thumb) solid var(--range-thumb-border-color);
     border-radius: 50%;
     background-color: var(--range-thumb-color);
     cursor: pointer;
     transition: background-color var(--transition),
       transform var(--transition);
-  }
-  &::-webkit-slider-thumb {
-    @include slider-thumb;
-  }
-
-  &::-moz-range-thumb {
-    @include slider-thumb;
-  }
-
-  &::-ms-thumb {
-    @include slider-thumb;
   }
 
   &:hover,
@@ -195,16 +143,7 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]) {
   &:active {
     --range-thumb-color: var(--range-thumb-active-color);
 
-    /* Slider Thumb */
-    &::-webkit-slider-thumb {
-      transform: scale(1.25);
-    }
-
-    &::-moz-range-thumb {
-      transform: scale(1.25);
-    }
-
-    &::-ms-thumb {
+    &::range-thumb { /* 1 */
       transform: scale(1.25);
     }
   }
@@ -237,7 +176,7 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]) {
 
 /* Cancel button */
 [type="search"] {
-  &::-webkit-search-cancel-button {
+  &::-webkit-search-cancel-button { /* 2 */
     -webkit-appearance: none;
     display: none;
   }
