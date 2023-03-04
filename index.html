@@ -25,12 +25,12 @@
     </ul>
   </nav>
 
-  <main class="container">
+  <div class="content-with-aside">
     <aside>
       <nav aria-label="Table of Contents"></nav>
     </aside>
 
-    <div role="document" id="main">
+    <main role="document" id="main">
       <article>
         <h1>ZeptoCSS</h1>
         <p>This is currently a work in progress.</p>
@@ -206,151 +206,145 @@
         <h1>Tables</h1>
 
         <section>
-          <table role="grid">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Heading</th>
-                <th scope="col">Heading</th>
-                <th scope="col">Heading</th>
-                <th scope="col">Heading</th>
-                <th scope="col">Heading</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-              </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-              </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <th scope="col">#</th>
-                <td scope="col">Total</td>
-                <td scope="col">Total</td>
-                <td scope="col">Total</td>
-                <td scope="col">Total</td>
-                <td scope="col">Total</td>
-              </tr>
-            </tfoot>
-          </table>
+          <h2>Layout</h2>
+          <div class="reel">
+            <table role="grid">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Heading</th>
+                  <th scope="col">Heading</th>
+                  <th scope="col">Heading</th>
+                  <th scope="col">Heading</th>
+                  <th scope="col">Heading</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th scope="col">#</th>
+                  <td scope="col">Total</td>
+                  <td scope="col">Total</td>
+                  <td scope="col">Total</td>
+                  <td scope="col">Total</td>
+                  <td scope="col">Total</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
         </section>
       </article>
 
       <article>
         <h1>CSS</h1>
+
         <section>
           <h2>Colors</h2>
-
-          <table>
-            <thead>
-              <tr>
-                <th>Base</th>
-                <th>Primary</th>
-                <th>Grey</th>
-                <th>Amber</th>
-                <th>Green</th>
-                <th>Red</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div style="color: var(--black); background: var(--white)">--white</div>
-                  <div style="color: var(--white); background: var(--black)">--black</div>
-                  <div style="color: var(--black); background: var(--color)">--color</div>
-                  <div style="color: var(--black); background: var(--muted-color)">--muted-color</div>
-                  <div style="color: var(--black); background: var(--contrast)">--contrast</div>
-                  <div style="color: var(--black); background: var(--secondary)">--secondary</div>
-                </td>
-                <td>
-                  <div style="color: var(--black); background: var(--primary-50)">--primary-50</div>
-                  <div style="color: var(--black); background: var(--primary-100)">--primary-100</div>
-                  <div style="color: var(--black); background: var(--primary-200)">--primary-200</div>
-                  <div style="color: var(--black); background: var(--primary-300)">--primary-300</div>
-                  <div style="color: var(--black); background: var(--primary-400)">--primary-400</div>
-                  <div style="color: var(--black); background: var(--primary-500)">--primary-500</div>
-                  <div style="color: var(--white); background: var(--primary-600)">--primary-600</div>
-                  <div style="color: var(--white); background: var(--primary-700)">--primary-700</div>
-                  <div style="color: var(--white); background: var(--primary-800)">--primary-800</div>
-                  <div style="color: var(--white); background: var(--primary-900)">--primary-900</div>
-                </td>
-                <td>
-                  <div style="color: var(--black); background: var(--grey-50)">--grey-50</div>
-                  <div style="color: var(--black); background: var(--grey-100)">--grey-100</div>
-                  <div style="color: var(--black); background: var(--grey-200)">--grey-200</div>
-                  <div style="color: var(--black); background: var(--grey-300)">--grey-300</div>
-                  <div style="color: var(--black); background: var(--grey-400)">--grey-400</div>
-                  <div style="color: var(--black); background: var(--grey-500)">--grey-500</div>
-                  <div style="color: var(--white); background: var(--grey-600)">--grey-600</div>
-                  <div style="color: var(--white); background: var(--grey-700)">--grey-700</div>
-                  <div style="color: var(--white); background: var(--grey-800)">--grey-800</div>
-                  <div style="color: var(--white); background: var(--grey-900)">--grey-900</div>
-                </td>
-                <td>
-                  <div style="color: var(--black); background: var(--amber-50)">--amber-50</div>
-                  <div style="color: var(--black); background: var(--amber-100)">--amber-100</div>
-                  <div style="color: var(--black); background: var(--amber-200)">--amber-200</div>
-                  <div style="color: var(--black); background: var(--amber-300)">--amber-300</div>
-                  <div style="color: var(--black); background: var(--amber-400)">--amber-400</div>
-                  <div style="color: var(--black); background: var(--amber-500)">--amber-500</div>
-                  <div style="color: var(--white); background: var(--amber-600)">--amber-600</div>
-                  <div style="color: var(--white); background: var(--amber-700)">--amber-700</div>
-                  <div style="color: var(--white); background: var(--amber-800)">--amber-800</div>
-                  <div style="color: var(--white); background: var(--amber-900)">--amber-900</div>
-                </td>
-                <td>
-                  <div style="color: var(--black); background: var(--green-50)">--green-50</div>
-                  <div style="color: var(--black); background: var(--green-100)">--green-100</div>
-                  <div style="color: var(--black); background: var(--green-200)">--green-200</div>
-                  <div style="color: var(--black); background: var(--green-300)">--green-300</div>
-                  <div style="color: var(--black); background: var(--green-400)">--green-400</div>
-                  <div style="color: var(--black); background: var(--green-500)">--green-500</div>
-                  <div style="color: var(--white); background: var(--green-600)">--green-600</div>
-                  <div style="color: var(--white); background: var(--green-700)">--green-700</div>
-                  <div style="color: var(--white); background: var(--green-800)">--green-800</div>
-                  <div style="color: var(--white); background: var(--green-900)">--green-900</div>
-                </td>
-                <td>
-                  <div style="color: var(--black); background: var(--red-50)">--red-50</div>
-                  <div style="color: var(--black); background: var(--red-100)">--red-100</div>
-                  <div style="color: var(--black); background: var(--red-200)">--red-200</div>
-                  <div style="color: var(--black); background: var(--red-300)">--red-300</div>
-                  <div style="color: var(--black); background: var(--red-400)">--red-400</div>
-                  <div style="color: var(--black); background: var(--red-500)">--red-500</div>
-                  <div style="color: var(--white); background: var(--red-600)">--red-600</div>
-                  <div style="color: var(--white); background: var(--red-700)">--red-700</div>
-                  <div style="color: var(--white); background: var(--red-800)">--red-800</div>
-                  <div style="color: var(--white); background: var(--red-900)">--red-900</div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="reel" style="--reel-item-min-width: max(8em, 15%)">
+            <div>
+              <h3>Base</h3>
+              <div style="color: var(--black); background: var(--white)">--white</div>
+              <div style="color: var(--white); background: var(--black)">--black</div>
+              <div style="color: var(--black); background: var(--color)">--color</div>
+              <div style="color: var(--black); background: var(--muted-color)">--muted-color</div>
+              <div style="color: var(--black); background: var(--contrast)">--contrast</div>
+              <div style="color: var(--black); background: var(--secondary)">--secondary</div>
+            </div>
+            <div>
+              <h3>Primary</h3>
+              <div style="color: var(--black); background: var(--primary-50)">--primary-50</div>
+              <div style="color: var(--black); background: var(--primary-100)">--primary-100</div>
+              <div style="color: var(--black); background: var(--primary-200)">--primary-200</div>
+              <div style="color: var(--black); background: var(--primary-300)">--primary-300</div>
+              <div style="color: var(--black); background: var(--primary-400)">--primary-400</div>
+              <div style="color: var(--black); background: var(--primary-500)">--primary-500</div>
+              <div style="color: var(--white); background: var(--primary-600)">--primary-600</div>
+              <div style="color: var(--white); background: var(--primary-700)">--primary-700</div>
+              <div style="color: var(--white); background: var(--primary-800)">--primary-800</div>
+              <div style="color: var(--white); background: var(--primary-900)">--primary-900</div>
+            </div>
+            <div>
+              <h3>Grey</h3>
+              <div style="color: var(--black); background: var(--grey-50)">--grey-50</div>
+              <div style="color: var(--black); background: var(--grey-100)">--grey-100</div>
+              <div style="color: var(--black); background: var(--grey-200)">--grey-200</div>
+              <div style="color: var(--black); background: var(--grey-300)">--grey-300</div>
+              <div style="color: var(--black); background: var(--grey-400)">--grey-400</div>
+              <div style="color: var(--black); background: var(--grey-500)">--grey-500</div>
+              <div style="color: var(--white); background: var(--grey-600)">--grey-600</div>
+              <div style="color: var(--white); background: var(--grey-700)">--grey-700</div>
+              <div style="color: var(--white); background: var(--grey-800)">--grey-800</div>
+              <div style="color: var(--white); background: var(--grey-900)">--grey-900</div>
+            </div>
+            <div>
+              <h3>Amber</h3>
+              <div style="color: var(--black); background: var(--amber-50)">--amber-50</div>
+              <div style="color: var(--black); background: var(--amber-100)">--amber-100</div>
+              <div style="color: var(--black); background: var(--amber-200)">--amber-200</div>
+              <div style="color: var(--black); background: var(--amber-300)">--amber-300</div>
+              <div style="color: var(--black); background: var(--amber-400)">--amber-400</div>
+              <div style="color: var(--black); background: var(--amber-500)">--amber-500</div>
+              <div style="color: var(--white); background: var(--amber-600)">--amber-600</div>
+              <div style="color: var(--white); background: var(--amber-700)">--amber-700</div>
+              <div style="color: var(--white); background: var(--amber-800)">--amber-800</div>
+              <div style="color: var(--white); background: var(--amber-900)">--amber-900</div>
+            </div>
+            <div>
+              <h3>Green</h3>
+              <div style="color: var(--black); background: var(--green-50)">--green-50</div>
+              <div style="color: var(--black); background: var(--green-100)">--green-100</div>
+              <div style="color: var(--black); background: var(--green-200)">--green-200</div>
+              <div style="color: var(--black); background: var(--green-300)">--green-300</div>
+              <div style="color: var(--black); background: var(--green-400)">--green-400</div>
+              <div style="color: var(--black); background: var(--green-500)">--green-500</div>
+              <div style="color: var(--white); background: var(--green-600)">--green-600</div>
+              <div style="color: var(--white); background: var(--green-700)">--green-700</div>
+              <div style="color: var(--white); background: var(--green-800)">--green-800</div>
+              <div style="color: var(--white); background: var(--green-900)">--green-900</div>
+            </div>
+            <div>
+              <h3>Red</h3>
+              <div style="color: var(--black); background: var(--red-50)">--red-50</div>
+              <div style="color: var(--black); background: var(--red-100)">--red-100</div>
+              <div style="color: var(--black); background: var(--red-200)">--red-200</div>
+              <div style="color: var(--black); background: var(--red-300)">--red-300</div>
+              <div style="color: var(--black); background: var(--red-400)">--red-400</div>
+              <div style="color: var(--black); background: var(--red-500)">--red-500</div>
+              <div style="color: var(--white); background: var(--red-600)">--red-600</div>
+              <div style="color: var(--white); background: var(--red-700)">--red-700</div>
+              <div style="color: var(--white); background: var(--red-800)">--red-800</div>
+              <div style="color: var(--white); background: var(--red-900)">--red-900</div>
+            </div>
           </div>
         </section>
       </article>
-    </div>
-  </main>
+    </main>
+  </div>
 
   <footer>
     <small>MIT © <a href="https://thorsen.pm">Jan Henning Thorsen</a></small>

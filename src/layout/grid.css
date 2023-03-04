@@ -7,8 +7,7 @@
   grid-column-gap: var(--grid-spacing-horizontal);
   grid-row-gap: var(--grid-spacing-vertical);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(0%, 1fr));
-  margin: 0;
+  grid-template-columns: repeat(auto-fit, minmax(var(--grid-item-min-width), 1fr));
 
   & > * {
     min-width: 0; /* HACK for childs in overflow */

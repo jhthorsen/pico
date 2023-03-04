@@ -36,7 +36,7 @@ function makeTOC(nav, headings) {
 }
 
 makeTOC(
-  document.querySelector('main nav'),
+  document.querySelector('nav[aria-label="Table of Contents"]'),
   Array.from(document.querySelectorAll('h1, h2')),
 );
 

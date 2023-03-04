@@ -1,0 +1,19 @@
+/*
+ * Useful & Responsive Layouts, no Media Queries required - Kevin Powell
+ * https://www.youtube.com/watch?v=p3_xN2Zp1TY
+ */
+
+.reel {
+  --gap: var(--reel-spacing-horizontal, var(--grid-spacing-horizontal));
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: var(--reel-item-min-width, 100%);
+  gap: var(--gap);
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  max-width: 100vw;
+
+  > * {
+    scroll-snap-align: start;
+  }
+}

@@ -7,6 +7,9 @@
 @import "layout/grid.css";
 @import "layout/scroller.css";
 
+@import "layout/cluster.css";
+@import "layout/reel.css";
+
 @import "content/typography.css";
 @import "content/typography/headings.css";
 @import "content/embedded.css";

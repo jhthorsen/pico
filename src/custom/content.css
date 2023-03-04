@@ -1,30 +1,34 @@
-body {
+:root {
   --content-padding-top: 7rem;
+  scroll-padding-top: var(--content-padding-top);
+}
+
+body {
   padding-top: var(--content-padding-top);
 }
 
-body > main {
+.content-with-aside {
+  padding-inline: var(--spacing);
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing);
-  padding-inline: var(--spacing);
+  align-items: flex-start;
+  gap: var(--grid-spacing-horizontal);
 
-  & > * {
-    flex: 1 1 70%;
+  > aside {
+    flex-basis: 12rem;
+    flex-grow: 1;
   }
 
-  & > aside {
-    flex: 1 1 12em;
+  > main {
+    width: 30rem;
+    flex-grow: 9999; /* make the main grow faster then aside */
   }
 }
 
-body > main > aside {
-  nav {
+/* 45rem = 30rem + 12rem + --spacing * 3 */
+@media (min-width: 45rem) {
+  .content-with-aside > aside {
     position: sticky;
     top: var(--content-padding-top);
-  }
-
-  ul {
-    padding-left: .25rem;
   }
 }

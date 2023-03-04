@@ -1,0 +1,10 @@
+/*
+ * Useful & Responsive Layouts, no Media Queries required - Kevin Powell
+ * https://www.youtube.com/watch?v=p3_xN2Zp1TY
+ */
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--grid-spacing-horizontal);
+}
