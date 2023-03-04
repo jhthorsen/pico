@@ -29,6 +29,7 @@ td {
   font-size: var(--font-size);
   text-align: left;
   text-align: start;
+  vertical-align: top;
 }
 
 /* Footer */
