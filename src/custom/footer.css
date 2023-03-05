@@ -1,0 +1,13 @@
+body > footer {
+  background-color: var(--grey-800);
+  padding: calc(var(--spacing) * 2);
+  text-align: center;
+  height: var(--footer-height);
+  display: flex;
+  flex-direction: column-reverse;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
