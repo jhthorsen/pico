@@ -1,9 +1,9 @@
 h1 {
-  --font-multiplier: 2.20;
+  --font-multiplier: 2.40;
 }
 
 h2 {
-  --font-multiplier: 1.60;
+  --font-multiplier: 2.00;
 }
 
 h3 {
@@ -29,8 +29,8 @@ h4,
 h5,
 h6 {
   margin-top: 0;
-  margin-bottom: 0.2em;
-  font-weight: 700;
+  margin-bottom: 0.85em;
+  font-weight: 400;
   font-size: calc(var(--font-multiplier, 1) * 1rem);
   line-height: calc(2 / var(--font-multiplier, 1.5) * 1em);
 }
