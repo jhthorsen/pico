@@ -1,26 +1,28 @@
 import './zepto.css';
+import MenuSpy from 'menuspy';
+
+function idFromEl(el) {
+  return el.textContent.trim().toLowerCase().replace(/\W+/g, '-');
+}
 
 function makeTOC(nav, headings) {
+  let prefix = '';
   let ul;
+
   for (const hx of headings) {
-    if (!hx.id) hx.id = hx.textContent.trim().toLowerCase().replace(/\W+/g, '-');
+    if (!hx.id) hx.id = prefix + idFromEl(hx);
+    if (hx.id == 'zeptocss') continue; // Skip main heading
 
     const level = hx.tagName.toLowerCase();
-    if (!hx.parentNode.querySelector('h2')) {
-      const a = document.createElement('a');
-      a.textContent = hx.textContent;
-      a.href = `#${hx.id}`;
-      nav.appendChild(a);
-    }
-    else if (level === 'h1') {
+    if (level === 'h1') {
       const details = document.createElement('details');
       nav.appendChild(details);
 
       const summary = document.createElement('summary');
-      summary.setAttribute('aria-haspopup', 'listbox');
       summary.textContent = hx.textContent;
       details.appendChild(summary);
 
+      prefix = idFromEl(hx) + '-';
       ul = document.createElement('ul');
       details.appendChild(ul);
     }
@@ -35,10 +37,19 @@ function makeTOC(nav, headings) {
   }
 }
 
-makeTOC(
-  document.querySelector('nav[aria-label="Table of Contents"]'),
-  Array.from(document.querySelectorAll('h1, h2')),
-);
+const toc = document.querySelector('nav[aria-label="Table of Contents"]');
+makeTOC(toc, document.querySelectorAll('h1, h2'));
+
+new MenuSpy(toc, {
+  enableLocationHash: false,
+  callback({elm}) {
+    const targetDetails = elm.closest('details');
+    if (!targetDetails) return;
+    for (const details of toc.querySelectorAll('details')) {
+      details[details === targetDetails ? 'setAttribute' : 'removeAttribute']('open', true);
+    }
+  },
+});
 
 const searchForm = document.querySelector('nav form');
 const q = searchForm.querySelector('[name=q]');

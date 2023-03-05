@@ -19,6 +19,15 @@
   > aside {
     flex-basis: 12rem;
     flex-grow: 1;
+
+    li a {
+      font-size: 0.9em;
+      padding: calc(var(--nav-link-spacing-vertical) / 2) calc(var(--nav-link-spacing-horizontal) * 2);
+    }
+
+    li.active a {
+      color: var(--primary-focus);
+    }
   }
 
   > main {
