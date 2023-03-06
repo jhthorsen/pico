@@ -23,10 +23,15 @@
     li a {
       font-size: 0.9em;
       padding: calc(var(--nav-link-spacing-vertical) / 2) calc(var(--nav-link-spacing-horizontal) * 2);
+      color: var(--secondary);
     }
 
     li.active a {
-      color: var(--primary-focus);
+      color: var(--primary);
+    }
+
+    li a:hover {
+      color: var(--primary-hover);
     }
   }
 
