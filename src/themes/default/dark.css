@@ -8,17 +8,17 @@
 
     --primary: var(--primary-600);
     --primary-hover: var(--primary-500);
-    --primary-focus: rgba(var(--primary-600), 0.25);
+    --primary-focus: hsla(var(--primary-600--hsl), 0.25);
     --primary-inverse: var(--white);
 
     --secondary: var(--grey-600);
     --secondary-hover: var(--grey-500);
-    --secondary-focus: rgba(var(--grey-500), 0.25);
+    --secondary-focus: hsla(var(--grey-500--hsl), 0.25);
     --secondary-inverse: var(--white);
 
     --contrast: var(--grey-50);
     --contrast-hover: var(--white);
-    --contrast-focus: rgba(var(--grey-500), 0.25);
+    --contrast-focus: hsla(var(--grey-500--hsl), 0.25);
     --contrast-inverse: var(--black);
 
     --mark-background-color: var(--grey-300);
@@ -30,8 +30,8 @@
     --blockquote-border-color: var(--muted-border-color);
     --blockquote-footer-color: var(--muted-color);
 
-    --button-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    --button-hover-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    --button-box-shadow: 0 0 0 hsla(0, 0%, 0%, 0);
+    --button-hover-box-shadow: 0 0 0 hsla(0, 0%, 0%, 0);
 
     --form-element-background-color: var(--black);
     --form-element-border-color: var(--grey-800);
@@ -45,10 +45,10 @@
     --form-element-disabled-opacity: 0.5;
     --form-element-invalid-border-color: var(--red-900);
     --form-element-invalid-active-border-color: var(--red-800);
-    --form-element-invalid-focus-color: rgba(var(--red-800), 0.25);
+    --form-element-invalid-focus-color: hsla(var(--red-800--hsl), 0.25);
     --form-element-valid-border-color: var(--green-800);
     --form-element-valid-active-border-color: var(--green-700);
-    --form-element-valid-focus-color: rgba(var(--green-700), 0.25);
+    --form-element-valid-focus-color: hsla(var(--green-700--hsl), 0.25);
 
     --switch-background-color: var(--grey-800);
     --switch-color: var(--primary-inverse);
@@ -62,7 +62,7 @@
     --range-thumb-active-color: var(--primary);
 
     --table-border-color: var(--muted-border-color);
-    --table-row-stripped-background-color: rgba(var(--grey-500), 0.05);
+    --table-row-stripped-background-color: hsla(var(--grey-500--hsl), 0.05);
 
     --code-background-color: var(--black);
     --code-color: var(--muted-color);
@@ -84,22 +84,22 @@
     --card-background-color: var(--black);
     --card-border-color: var(--card-background-color);
     --card-box-shadow:
-      calc(var(--box-shadow-elevation) * 0.5 * 0.029) calc(var(--box-shadow-elevation) * 0.029) calc(var(--box-shadow-blur-strengh) * 0.029) rgba(var(--black), var(--box-shadow-opacity) * 0.283),
-      calc(var(--box-shadow-elevation) * 0.5 * 0.067) calc(var(--box-shadow-elevation) * 0.067) calc(var(--box-shadow-blur-strengh) * 0.067) rgba(var(--black), var(--box-shadow-opacity) * 0.4),
-      calc(var(--box-shadow-elevation) * 0.5 * 0.125) calc(var(--box-shadow-elevation) * 0.125) calc(var(--box-shadow-blur-strengh) * 0.125) rgba(var(--black), var(--box-shadow-opacity) * 0.5),
-      calc(var(--box-shadow-elevation) * 0.5 * 0.225) calc(var(--box-shadow-elevation) * 0.225) calc(var(--box-shadow-blur-strengh) * 0.225) rgba(var(--black), var(--box-shadow-opacity) * 0.6),
-      calc(var(--box-shadow-elevation) * 0.5 * 0.417) calc(var(--box-shadow-elevation) * 0.417) calc(var(--box-shadow-blur-strengh) * 0.417) rgba(var(--black), var(--box-shadow-opacity) * 0.717),
-      calc(var(--box-shadow-elevation) * 0.5) var(--box-shadow-elevation) var(--box-shadow-blur-strengh) rgba(var(--black), var(--box-shadow-opacity)),
-      0 0 0 0.0625rem rgba(var(--black), (var(--box-shadow-opacity) * 0.25) );
+      calc(var(--box-shadow-elevation) * 0.5 * 0.029) calc(var(--box-shadow-elevation) * 0.029) calc(var(--box-shadow-blur-strengh) * 0.029) hsla(var(--black--hsl), calc(var(--box-shadow-opacity) * 0.283)),
+      calc(var(--box-shadow-elevation) * 0.5 * 0.067) calc(var(--box-shadow-elevation) * 0.067) calc(var(--box-shadow-blur-strengh) * 0.067) hsla(var(--black--hsl), calc(var(--box-shadow-opacity) * 0.4)),
+      calc(var(--box-shadow-elevation) * 0.5 * 0.125) calc(var(--box-shadow-elevation) * 0.125) calc(var(--box-shadow-blur-strengh) * 0.125) hsla(var(--black--hsl), calc(var(--box-shadow-opacity) * 0.5)),
+      calc(var(--box-shadow-elevation) * 0.5 * 0.225) calc(var(--box-shadow-elevation) * 0.225) calc(var(--box-shadow-blur-strengh) * 0.225) hsla(var(--black--hsl), calc(var(--box-shadow-opacity) * 0.6)),
+      calc(var(--box-shadow-elevation) * 0.5 * 0.417) calc(var(--box-shadow-elevation) * 0.417) calc(var(--box-shadow-blur-strengh) * 0.417) hsla(var(--black--hsl), calc(var(--box-shadow-opacity) * 0.717)),
+      calc(var(--box-shadow-elevation) * 0.5) var(--box-shadow-elevation) var(--box-shadow-blur-strengh) hsla(var(--black--hsl), var(--box-shadow-opacity)),
+      0 0 0 0.0625rem hsla(var(--black--hsl), calc(var(--box-shadow-opacity) * 0.25));
     --card-sectionning-background-color: var(--black);
 
     --dropdown-background-color: var(--grey-900);
     --dropdown-border-color: var(--grey-900);
     --dropdown-box-shadow: var(--card-box-shadow);
     --dropdown-color: var(--color);
-    --dropdown-hover-background-color: rgba(mix(var(--grey-900), var(--grey-800)), 0.75);
+    --dropdown-hover-background-color: hsla(var(--grey-800--hsl), 0.75);
 
-    --modal-overlay-background-color: rgba(mix(var(--grey-900), var(--grey-800)), 0.8);
+    --modal-overlay-background-color: hsla(var(--grey-800--hsl), 0.8);
 
     --progress-background-color: var(--grey-900);
     --progress-color: var(--primary);
