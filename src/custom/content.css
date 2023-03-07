@@ -1,12 +1,14 @@
 :root {
   --content-padding-top: 7rem;
+  --content-max-width: 60em;
   --footer-height: 6rem;
   scroll-padding-top: var(--content-padding-top);
 }
 
 .content-with-aside {
-  background: var(--background-color);
   padding: var(--content-padding-top) var(--spacing) 30vh var(--spacing);
+  margin-inline: auto;
+  max-width: var(--content-max-width);
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -14,7 +16,6 @@
 
   /* footer */
   margin-bottom: var(--footer-height);
-  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2);
 
   > aside {
     flex-basis: 12rem;

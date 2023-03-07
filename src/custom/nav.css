@@ -8,6 +8,14 @@ nav[aria-label="Primary"] {
   right: 0;
   z-index: 10;
 
+  ul:first-child {
+    margin-left: max(calc(100vw / 2 - var(--content-max-width) / 2), 1px);
+  }
+
+  ul:last-child {
+    margin-right: max(calc(100vw / 2 - var(--content-max-width) / 2), 1px);
+  }
+
   form {
     padding: 0;
     margin: 0;
