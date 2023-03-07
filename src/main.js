@@ -57,3 +57,16 @@ q.value = q.value.replace('repo:jhthorsen/zeptocss ', '');
 searchForm.addEventListener('submit', (_event) => {
   q.value = 'repo:jhthorsen/zeptocss ' + q.value;
 });
+
+for (const name of ['grey', 'primary']) {
+  const range = document.getElementById(`theme_${name}_hue`);
+  const text = document.getElementById(`theme_${name}_text`);
+  const root = document.documentElement;
+
+  range.value = getComputedStyle(document.documentElement).getPropertyValue(`--${name}-hue`);
+  text.innerText = range.value;
+  range.addEventListener('input', (_e) => {
+    root.style.setProperty(`--${name}-hue`, range.value);
+    text.innerText = range.value;
+  });
+}
