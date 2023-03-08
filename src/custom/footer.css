@@ -1,5 +1,6 @@
 body > footer {
   background-color: var(--grey-800);
+  color: var(--primary-inverse);
   padding: calc(var(--spacing) * 2);
   text-align: center;
   height: var(--footer-height);

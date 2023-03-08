@@ -7,17 +7,17 @@
 
   --primary: var(--primary-600);
   --primary-hover: var(--primary-500);
-  --primary-focus: hsla(var(--primary-600--hsl), 0.25);
+  --primary-focus: hsla(var(--primary-600--hsl), 0.3);
   --primary-inverse: var(--white);
 
   --secondary: var(--grey-600);
   --secondary-hover: var(--grey-500);
-  --secondary-focus: hsla(var(--grey-500--hsl), 0.25);
+  --secondary-focus: hsla(var(--grey-500--hsl), 0.3);
   --secondary-inverse: var(--white);
 
   --contrast: var(--grey-50);
   --contrast-hover: var(--white);
-  --contrast-focus: hsla(var(--grey-500--hsl), 0.25);
+  --contrast-focus: hsla(var(--grey-500--hsl), 0.3);
   --contrast-inverse: var(--black);
 
   --mark-background-color: var(--grey-300);
@@ -53,15 +53,15 @@
   --switch-color: var(--primary-inverse);
   --switch-checked-background-color: var(--primary);
 
-  --range-border-color: var(--grey-900);
-  --range-active-border-color: var(--grey-800);
+  --range-border-color: var(--grey-800);
+  --range-active-border-color: var(--grey-700);
   --range-thumb-border-color: var(--background-color);
   --range-thumb-color: var(--secondary);
   --range-thumb-hover-color: var(--secondary-hover);
   --range-thumb-active-color: var(--primary);
 
   --table-border-color: var(--muted-border-color);
-  --table-row-stripped-background-color: hsla(var(--grey-500--hsl), 0.05);
+  --table-row-striped-background-color: hsla(var(--grey-500--hsl), 0.05);
 
   --code-background-color: var(--black);
   --code-color: var(--muted-color);

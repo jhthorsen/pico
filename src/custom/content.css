@@ -6,16 +6,13 @@
 }
 
 .content-with-aside {
-  padding: var(--content-padding-top) var(--spacing) 30vh var(--spacing);
+  padding: var(--content-padding-top) var(--spacing) 20vh var(--spacing);
   margin-inline: auto;
   max-width: var(--content-max-width);
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   gap: var(--grid-spacing-horizontal);
-
-  /* footer */
-  margin-bottom: var(--footer-height);
 
   > aside {
     flex-basis: 12rem;

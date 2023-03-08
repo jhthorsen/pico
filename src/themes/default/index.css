@@ -23,8 +23,8 @@
   --primary-800--hsl: hsl(var(--primary-hue), 95%, 23%);
   --primary-900--hsl: hsl(var(--primary-hue), 100%, 15%);
 
-  --black--hsl: #000;
-  --white--hsl: #fff;
+  --black--hsl: #040404;
+  --white--hsl: #f2f2f2;
 
   --amber-50--hsl: #fff8e1;
   --amber-100--hsl: #ffecb3;

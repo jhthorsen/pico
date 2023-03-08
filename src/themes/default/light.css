@@ -7,17 +7,17 @@
 
   --primary: var(--primary-600);
   --primary-hover: var(--primary-700);
-  --primary-focus: hsla(var(--primary-600--hsl), 0.125);
+  --primary-focus: hsla(var(--primary-600--hsl), 0.3);
   --primary-inverse: var(--white);
 
   --secondary: var(--grey-600);
   --secondary-hover: var(--grey-700);
-  --secondary-focus: hsla(var(--grey-600--hsl), 0.125);
+  --secondary-focus: hsla(var(--grey-600--hsl), 0.3);
   --secondary-inverse: var(--white);
 
   --contrast: var(--grey-900);
   --contrast-hover: var(--black);
-  --contrast-focus: hsla(var(--grey-600--hsl), 0.125);
+  --contrast-focus: hsla(var(--grey-600--hsl), 0.3);
   --contrast-inverse: var(--white);
 
   --mark-background-color: var(--amber-100);
@@ -32,11 +32,11 @@
   --button-box-shadow: 0 0 0 hsla(0, 0%, 0%, 0);
   --button-hover-box-shadow: 0 0 0 hsla(0, 0%, 0%, 0);
 
-  --form-element-background-color: transparent;
+  --form-element-background-color: hsla(var(--grey-100--hsl), 0.2);
   --form-element-border-color: var(--grey-300);
   --form-element-color: var(--color);
   --form-element-placeholder-color: var(--muted-color);
-  --form-element-active-background-color: transparent;
+  --form-element-active-background-color: var(--form-element-background-color);
   --form-element-active-border-color: var(--primary);
   --form-element-focus-color: var(--primary-focus);
   --form-element-disabled-background-color: var(--grey-100);
@@ -61,7 +61,7 @@
   --range-thumb-active-color: var(--primary);
 
   --table-border-color: var(--muted-border-color);
-  --table-row-stripped-background-color: var(--grey-50);
+  --table-row-striped-background-color: hsla(var(--grey-100--hsl), 0.7);
 
   --code-background-color: var(--grey-50);
   --code-color: var(--muted-color);
