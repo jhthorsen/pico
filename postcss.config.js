@@ -1,6 +1,5 @@
 import postcssImport from 'postcss-import';
 import postcssNested from 'postcss-nested';
-import postcssPresetEnv from 'postcss-preset-env';
 import postcssPseudoShortHand from 'postcss-pseudo-shorthand';
 
 import Color from 'color';
@@ -45,12 +44,6 @@ const config = {
     postcssNested(),
     postcssPseudoShortHand(),
     postcssColorVariableShorthand,
-    postcssPresetEnv({
-      stage: 2,
-      features: {
-        'nesting-rules': false, // convered by postcssNested
-      }
-    }),
   ],
 };
 
