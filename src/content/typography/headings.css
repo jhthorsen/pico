@@ -3,19 +3,19 @@ h1 {
 }
 
 h2 {
-  --font-multiplier: 2.00;
+  --font-multiplier: 2.10;
 }
 
 h3 {
-  --font-multiplier: 1.30;
+  --font-multiplier: 1.40;
 }
 
 h4 {
-  --font-multiplier: 1.00;
+  --font-multiplier: 1.20;
 }
 
 h5 {
-  --font-multiplier: 1.00;
+  --font-multiplier: 1.10;
 }
 
 h6 {
@@ -28,11 +28,11 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0;
-  margin-bottom: 0.85em;
+  font-family: var(--font-family-serif);
   font-weight: 400;
   font-size: calc(var(--font-multiplier, 1) * 1rem);
-  line-height: calc(2 / var(--font-multiplier, 1.5) * 1em);
+  line-height: 1.1;
+  margin-block: 0.2em 0.85em;
 }
 
 /* Margin-top for headings after a typography block */
