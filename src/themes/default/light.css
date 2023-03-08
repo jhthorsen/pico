@@ -1,5 +1,4 @@
-[data-theme="light"],
-:root:not([data-theme="dark"]) {
+:root {
   --background-color: var(--white);
 
   --color: var(--grey-700);
@@ -30,8 +29,8 @@
   --blockquote-border-color: var(--muted-border-color);
   --blockquote-footer-color: var(--muted-color);
 
-  --button-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  --button-hover-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  --button-box-shadow: 0 0 0 hsla(0, 0%, 0%, 0);
+  --button-hover-box-shadow: 0 0 0 hsla(0, 0%, 0%, 0);
 
   --form-element-background-color: transparent;
   --form-element-border-color: var(--grey-300);
@@ -74,6 +73,7 @@
   --code-comment-color: var(--grey-300);
 
   --accordion-border-color: var(--muted-border-color);
+  --accordion-active-summary-color: var(--primary);
   --accordion-close-summary-color: var(--color);
   --accordion-open-summary-color: var(--muted-color);
 

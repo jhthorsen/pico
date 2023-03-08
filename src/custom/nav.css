@@ -1,6 +1,15 @@
+:root {
+  --nav-background-color: rgba(215, 215, 215, 0.4);
+  --nav-backdrop-filter: saturate(180%) blur(20px);
+
+  &[data-theme="dark"] {
+    --nav-background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
 nav[aria-label="Primary"] {
-  backdrop-filter: var(--nav-backdrop-filter, saturate(180%) blur(20px));
-  background-color: var(--nav-background-color, rgba(0, 0, 0, 0.4));
+  backdrop-filter: var(--nav-backdrop-filter);
+  background-color: var(--nav-background-color);
   padding-inline: var(--spacing);
   position: fixed;
   top: 0;

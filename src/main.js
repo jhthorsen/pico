@@ -70,3 +70,12 @@ for (const name of ['grey', 'primary']) {
     text.innerText = range.value;
   });
 }
+
+const themeSwitcher = document.getElementById(`theme_switcher`);
+const setTheme = (e) => {
+  const prefers = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  const other = prefers === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', e.target.checked ? other : prefers);
+};
+themeSwitcher.addEventListener('click', setTheme);
+setTheme({target: themeSwitcher});
