@@ -59,9 +59,17 @@
   --red-800--hsl: #c62828;
   --red-900--hsl: #b71c1c;
 
-  --font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
+  --font-family-mono: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace",
+    "Noto Mono", "Oxygen Mono", "Liberation Mono", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", monospace;
+  --font-family-sans-serif: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
     "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-serif: "Iowan Old Style", "Apple Garamond", "Baskerville",
+    "Times New Roman", "Droid Serif", "Times", "Source Serif Pro", "serif",
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  --font-family: var(--font-family-sans-serif);
   --line-height: 1.5;
   --font-weight: 400;
   --font-size: clamp(16px, 2vw, 20px);
@@ -122,9 +130,7 @@ pre,
 code,
 kbd,
 samp {
-  --font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace",
-    "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family: var(--font-family-mono);
 }
 
 kbd {
