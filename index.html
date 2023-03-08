@@ -30,14 +30,16 @@
   </nav>
 
   <div class="content-with-aside">
-    <aside>
+    <aside id="toc">
       <nav aria-label="Table of Contents"></nav>
     </aside>
 
     <main role="document" id="main">
       <article>
         <h1>ZeptoCSS</h1>
-        <p>This is currently a work in progress.</p>
+        <p><mark>This project is currently a work in progress!</mark></p>
+        <p>Minimal CSS Framework for semantic HTML.</p>
+        <p>Zepto.css is a fork of the wonderful CSS Framework <a href="https://picocss.com/">Pico.css</a>.</p>
       </article>
 
       <article>
@@ -53,15 +55,23 @@
 
         <section>
           <h2>Links</h2>
-          <a href="#" role="button">Link</a>
-          <a href="#" role="button">Link</a>
+          <p class="cluster">
+            <a href="#typography-links">Link</a>
+            <a href="#typography-links" class="secondary">Secondary</a>
+            <a href="#typography-links" class="contrast">Contrast</a>
+            <a href="#typography-links" class="outline">Primary</a>
+            <a href="#typography-links" class="secondary outline">Secondary</a>
+            <a href="#typography-links" class="contrast outline">Contrast</a>
+          </p>
 
-          <h3>With classes</h3>
-          <a href="#" role="button" class="secondary">Secondary</a>
-          <a href="#" role="button" class="contrast">Contrast</a>
-          <a href="#" role="button" class="outline">Primary</a>
-          <a href="#" role="button" class="secondary outline">Secondary</a>
-          <a href="#" role="button" class="contrast outline">Contrast</a>
+          <p class="cluster">
+            <a href="#typography-links" role="button">Link</a>
+            <a href="#typography-links" role="button" class="secondary">Secondary</a>
+            <a href="#typography-links" role="button" class="contrast">Contrast</a>
+            <a href="#typography-links" role="button" class="outline">Primary</a>
+            <a href="#typography-links" role="button" class="secondary outline">Secondary</a>
+            <a href="#typography-links" role="button" class="contrast outline">Contrast</a>
+          </p>
         </section>
 
         <section>
@@ -99,119 +109,32 @@
       </article>
 
       <article>
-        <h1>Forms</h1>
+        <h1>Layouts</h1>
 
         <section>
-          <h2>Label</h2>
-          <form>
-            <div class="grid">
-              <label for="firstname">
-                First name
-                <input type="text" id="firstname" name="firstname" placeholder="First name" required>
-              </label>
-              <label for="lastname">
-                Last name
-                <input type="text" id="lastname" name="lastname" placeholder="Last name" required>
-              </label>
-            </div>
-            <label for="email">Email address</label>
-            <input type="email" id="email" name="email" placeholder="Email address" required>
-            <small>We'll never share your email with anyone else.</small>
-            <button type="submit">Submit</button>
-          </form>
+        <section>
+          <h2>Cluster</h2>
+          <p>See <a href="#typography-links">Typography/Links</a>.</p>
+        </section>
+
+        <h2>Grid</h2>
+          <p>See <a href="#typography-misc">Typography/Misc</a>.</p>
         </section>
 
         <section>
-          <h2>Buttons</h2>
-          <button>Button</button>
-          <input type="submit">
+          <h2>Reel</h2>
+          <p>See <a href="#css-colors">CSS/Colors</a>.</p>
         </section>
 
         <section>
-          <h2>Input states</h2>
-          <input type="text" placeholder="Valid" aria-invalid="false">
-          <input type="text" placeholder="Invalid" aria-invalid="true">
-          <input type="text" placeholder="Disabled" disabled>
-          <input type="text" value="Readonly" readonly>
+          <h2>Scroller</h2>
+          <p>See <a href="#layouts-tables">Layouts/Table</a>.</p>
         </section>
 
         <section>
-          <h2>Select</h2>
-          <label for="fruit">Fruit</label>
-          <select id="fruit" required>
-            <option value="" selected>Select a fruit…</option>
-            <option>…</option>
-          </select>
-        </section>
+          <h2>Tables</h2>
 
-        <section>
-          <h2>Radio</h2>
-          <fieldset>
-            <legend>Size</legend>
-            <label for="small">
-              <input type="radio" id="small" name="size" value="small" checked>
-              Small
-            </label>
-            <label for="medium">
-              <input type="radio" id="medium" name="size" value="medium">
-              Medium
-            </label>
-            <label for="large">
-              <input type="radio" id="large" name="size" value="large">
-              Large
-            </label>
-            <label for="extralarge">
-              <input type="radio" id="extralarge" name="size" value="extralarge" disabled>
-              Extra Large
-            </label>
-          </fieldset>
-        </section>
-
-        <section>
-          <h2>Checkbox</h2>
-          <fieldset>
-            <label for="terms">
-              <input type="checkbox" id="terms" name="terms">
-              I agree to the Terms and Conditions
-            </label>
-            <label for="terms_sharing">
-              <input type="checkbox" id="terms_sharing" name="terms_sharing" disabled checked>
-              I agree to share my information with partners
-            </label>
-          </fieldset>
-        </section>
-
-        <section>
-          <h2>Switch</h2>
-          <fieldset>
-            <label for="switch">
-              <input type="checkbox" id="switch" name="switch" role="switch">
-              Publish on my profile
-            </label>
-            <label for="switch_disabled">
-              <input type="checkbox" id="switch_disabled" name="switch_disabled" role="switch_disabled" disabled checked>
-              User must change password at next logon
-            </label>
-          </fieldset>
-        </section>
-
-        <section>
-          <h2>Misc</h2>
-          <input type="search" id="search" name="search" placeholder="Search">
-          <label for="file">File browser <input type="file" id="file" name="file"></label>
-          <label for="range">Range slider <input type="range" min="0" max="100" value="50" id="range" name="range"></label>
-          <label for="date">Date <input type="date" id="date" name="date"></label>
-          <label for="time">Time <input type="time" id="time" name="time"></label>
-          <label for="color">Color <input type="color" id="color" name="color" value="#0eaaaa"></label>
-        </section>
-      </article>
-
-      <article>
-        <h1>Tables</h1>
-
-        <section>
-          <h2>Layout</h2>
-          <div class="reel">
+          <figure>
             <table role="grid">
               <thead>
                 <tr>
@@ -260,7 +183,192 @@
                 </tr>
               </tfoot>
             </table>
-          </div>
+          </figure>
+        </section>
+      </article>
+
+      <article>
+        <h1>Forms</h1>
+
+        <section>
+          <h2>Buttons</h2>
+          <p class="grid">
+            <button>Button</button>
+            <input type="submit">
+          <p>
+        </section>
+
+         <section>
+          <h2>Inputs</h2>
+          <form>
+            <div class="grid">
+              <label for="firstname">
+                First name
+                <input type="text" id="firstname" name="firstname" placeholder="First name" required>
+              </label>
+              <label for="lastname">
+                Last name
+                <input type="text" id="lastname" name="lastname" placeholder="Last name" required>
+              </label>
+            </div>
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="Email address" required>
+            <small>We'll never share your email with anyone else.</small>
+            <button type="submit">Submit</button>
+          </form>
+        </section>
+
+        <section>
+          <h2>Input states</h2>
+          <p class="grid">
+            <input type="text" placeholder="Valid" aria-invalid="false">
+            <input type="text" placeholder="Invalid" aria-invalid="true">
+            <input type="text" value="Readonly" readonly>
+            <input type="text" placeholder="Disabled" disabled>
+          </p>
+        </section>
+
+        <section>
+          <h2>Checkbox</h2>
+          <fieldset>
+            <label for="terms">
+              <input type="checkbox" id="terms" name="terms">
+              I agree to the Terms and Conditions
+            </label>
+            <label for="terms_sharing">
+              <input type="checkbox" id="terms_sharing" name="terms_sharing" disabled checked>
+              I agree to share my information with partners
+            </label>
+          </fieldset>
+        </section>
+
+        <section>
+          <h2>Radio</h2>
+          <fieldset>
+            <legend>Size</legend>
+            <label for="small">
+              <input type="radio" id="small" name="size" value="small" checked>
+              Small
+            </label>
+            <label for="medium">
+              <input type="radio" id="medium" name="size" value="medium">
+              Medium
+            </label>
+            <label for="large">
+              <input type="radio" id="large" name="size" value="large">
+              Large
+            </label>
+            <label for="extralarge">
+              <input type="radio" id="extralarge" name="size" value="extralarge" disabled>
+              Extra Large
+            </label>
+          </fieldset>
+        </section>
+
+        <section>
+          <h2>Select</h2>
+          <label for="fruit">Fruit</label>
+          <select id="fruit" required>
+            <option value="" selected>Select a fruit…</option>
+            <option>…</option>
+          </select>
+        </section>
+
+        <section>
+          <h2>Switch</h2>
+          <fieldset>
+            <label for="switch">
+              <input type="checkbox" id="switch" name="switch" role="switch">
+              Publish on my profile
+            </label>
+            <label for="switch_disabled">
+              <input type="checkbox" id="switch_disabled" name="switch_disabled" role="switch_disabled" disabled checked>
+              User must change password at next logon
+            </label>
+          </fieldset>
+        </section>
+
+        <section>
+          <h2>Misc</h2>
+          <p class="grid">
+            <input type="search" id="search" name="search" placeholder="Search">
+          </p>
+          <p class="grid">
+            <label for="date">Date <input type="date" id="date" name="date"></label>
+            <label for="time">Time <input type="time" id="time" name="time"></label>
+          </p>
+          <p class="grid">
+            <label for="color">Color <input type="color" id="color" name="color" value="#0eaaaa"></label>
+            <label for="file">File browser <input type="file" id="file" name="file"></label>
+            <label for="range">Range slider <input type="range" min="0" max="100" value="50" id="range" name="range"></label>
+          </p>
+        </section>
+      </article>
+
+      <article>
+        <h1>Components</h1>
+        <section>
+          <h2>Accordions</h2>
+          <p>See <a href="#toc">Table of Contents</a> on left side.</p>
+        </section>
+
+        <section>
+          <h2>Dropdowns</h2>
+          <details role="list">
+            <summary aria-haspopup="listbox">Dropdown</summary>
+            <ul role="listbox">
+              <li><a>Action</a></li>
+              <li><a>Another action</a></li>
+              <li><a>Something else here</a></li>
+            </ul>
+          </details>
+        </section>
+
+        <section>
+          <h2>Navs</h2>
+
+          <h3>Stacked vertically</h3>
+          <aside>
+            <nav>
+              <ul>
+                <li><a href="#components-navs">Link</a></li>
+                <li><a href="#components-navs">Link</a></li>
+                <li><a href="#components-navs">Link</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <h3>Breadcrumb</h3>
+          <nav aria-label="breadcrumb">
+            <ul>
+              <li><a href="#components-navs">Home</a></li>
+              <li><a href="#components-navs">Category</a></li>
+              <li>Page</li>
+            </ul>
+          </nav>
+        </section>
+
+        <section>
+          <h2>Progress</h2>
+          <p>
+            <progress value="25" max="100"></progress>
+            <progress/>
+          </p>
+
+          <p>
+            <button aria-busy="true" class="secondary"></button>
+          </p>
+        </section>
+
+        <section>
+          <h2>Tooltips</h2>
+
+          <p class="grid">
+            <button data-tooltip="Top" data-placement="top">Top</button>
+            <button data-tooltip="Bottom" data-placement="bottom">Bottom</button>
+            <button data-tooltip="Right" data-placement="right">Right</button>
+            <button data-tooltip="Left" data-placement="left">Left</button>
+          </p>
         </section>
       </article>
 
@@ -283,7 +391,7 @@
 
         <section>
           <h2>Colors</h2>
-          <div class="reel" style="--reel-item-min-width: max(8em, 15%)">
+          <div class="reel" style="--reel-item-min-width: max(9em, 15%)">
             <div>
               <h3>Base</h3>
               <div style="color: var(--black); background: var(--white)">--white</div>
