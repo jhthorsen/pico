@@ -1,5 +1,5 @@
 :root {
-  --background-color: var(--white);
+  --background-color: var(--grey-50);
 
   --color: var(--grey-700);
   --muted-color: var(--grey-500);
