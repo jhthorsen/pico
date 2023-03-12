@@ -158,7 +158,7 @@ textarea {
   --box-shadow: none;
   border: var(--border-width) solid var(--border-color);
   border-radius: var(--border-radius);
-  outline: none;
+  outline-color: transparent;
   background-color: var(--background-color);
   box-shadow: var(--box-shadow);
   color: var(--color);

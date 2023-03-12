@@ -54,7 +54,7 @@ a,
 [role="link"] {
   --color: var(--primary);
   --background-color: transparent;
-  outline: none;
+  outline-color: transparent;
   background-color: var(--background-color); /* 1 */
   color: var(--color);
   text-decoration: var(--text-decoration);

@@ -50,7 +50,7 @@ details {
     }
 
     &:focus {
-      outline: none;
+      outline-color: transparent;
 
       &:not([role="button"]) {
         color: var(--accordion-active-summary-color);
