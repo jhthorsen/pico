@@ -40,4 +40,9 @@ nav[aria-label="Primary"] {
   input[type="search"] {
     --form-element-spacing-vertical: var(--nav-link-spacing-vertical);
   }
+
+  .brand {
+    color: var(--color);
+    margin-inline-start: calc(var(--nav-element-spacing-horizontal) * -1);
+  }
 }

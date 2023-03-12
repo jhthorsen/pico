@@ -32,6 +32,10 @@
     li a:hover {
       color: var(--primary-hover);
     }
+
+    nav {
+      max-width: 10rem;
+    }
   }
 
   > main {
