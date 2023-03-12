@@ -1,0 +1,29 @@
+/**
+ * Form label related elements
+ */
+
+/* Zepto */
+/* –––––––––––––––––––– */
+
+/* Fieldset */
+fieldset {
+  margin: 0;
+  margin-block-end: var(--spacing);
+  padding: 0;
+  border: 0;
+}
+
+/* Label & legend */
+label,
+fieldset legend {
+  display: block;
+  margin-block-end: calc(var(--spacing) * 0.25);
+  font-weight: var(--form-label-font-weight, var(--font-weight));
+}
+
+/* Styles for Input inside a label */
+label {
+  > :where(input, select, textarea) {
+    margin-block-start: calc(var(--spacing) * 0.25);
+  }
+}

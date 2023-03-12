@@ -14,9 +14,16 @@
 @import "content/typography/headings.css";
 @import "content/embedded.css";
 @import "content/button.css";
-@import "content/form.css";
-@import "content/form-checkbox-radio.css";
-@import "content/form-alt-input-types.css";
+
+@import "form/labels.css";
+@import "form/inputs.css";
+@import "form/checkbox-radio.css";
+@import "form/color.css";
+@import "form/date-time.css";
+@import "form/file.css";
+@import "form/range.css";
+@import "form/search.css";
+
 @import "content/table.css";
 @import "content/code.css";
 @import "content/miscs.css";

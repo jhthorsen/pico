@@ -1,0 +1,58 @@
+/**
+ * Form range element
+ */
+
+/* 1. Expanded using "postcss-pseudo-shorthand" */
+/* 2. Icon is added using var(--icon-search) */
+
+/* Range */
+[type="range"] {
+  /* Config */
+  --height-track: 0.25rem;
+  --height-thumb: 1.25rem;
+  --border-thumb: 2px;
+
+  /* Styles */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: var(--height-thumb);
+  background: none;
+
+  &::range-track { /* 1 */
+    width: 100%;
+    height: var(--height-track);
+    border-radius: var(--border-radius);
+    background-color: var(--range-border-color);
+    transition: background-color var(--transition),
+      box-shadow var(--transition);
+  }
+
+  &::range-thumb { /* 1 */
+    -webkit-appearance: none;
+    width: var(--height-thumb);
+    height: var(--height-thumb);
+    margin-block-start: calc(-var(--height-thumb) * 0.5 + var(--height-track) * 0.5);
+    border: var(--border-thumb) solid var(--range-thumb-border-color);
+    border-radius: 50%;
+    background-color: var(--range-thumb-color);
+    cursor: pointer;
+    transition: background-color var(--transition),
+      transform var(--transition);
+  }
+
+  &:hover,
+  &:focus {
+    --range-border-color: var(--range-active-border-color);
+    --range-thumb-color: var(--range-thumb-hover-color);
+  }
+
+  &:active {
+    --range-thumb-color: var(--range-thumb-active-color);
+
+    &::range-thumb { /* 1 */
+      transform: scale(1.25);
+    }
+  }
+}

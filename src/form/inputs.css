@@ -1,5 +1,5 @@
 /**
- * Form elements
+ * Form input related elements
  */
 
 /* Reboot based on : */
@@ -28,17 +28,6 @@ input {
 /* Remove the inheritance of text transform in Edge, Firefox, and IE */
 select {
   text-transform: none;
-}
-
-/* 1. Correct the text wrapping in Edge and IE */
-/* 2. Correct the color inheritance from `fieldset` elements in IE */
-/* 3. Remove the padding so developers are not caught out when they zero out */
-/* `fieldset` elements in all browsers */
-legend {
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  color: inherit; /* 2 */
-  white-space: normal; /* 1 */
 }
 
 /* 1. Remove the default vertical scrollbar in IE */
@@ -114,22 +103,6 @@ input:not([type="checkbox"], [type="radio"], [type="range"]) {
     (1rem * var(--line-height)) + (var(--form-element-spacing-vertical) * 2) +
       (var(--border-width) * 2)
   );
-}
-
-/* Fieldset */
-fieldset {
-  margin: 0;
-  margin-block-end: var(--spacing);
-  padding: 0;
-  border: 0;
-}
-
-/* Label & legend */
-label,
-fieldset legend {
-  display: block;
-  margin-block-end: calc(var(--spacing) * 0.25);
-  font-weight: var(--form-label-font-weight, var(--font-weight));
 }
 
 /* Blocks, 100% */
@@ -302,12 +275,5 @@ select {
     margin-block: calc(var(--spacing) * -0.75) var(--spacing);
     width: 100%;
     display: block;
-  }
-}
-
-/* Styles for Input inside a label */
-label {
-  > :where(input, select, textarea) {
-    margin-block-start: calc(var(--spacing) * 0.25);
   }
 }

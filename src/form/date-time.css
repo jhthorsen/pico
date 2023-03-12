@@ -1,0 +1,43 @@
+/**
+ * Form date and time related elements
+ */
+
+/* 1. Expanded using "postcss-pseudo-shorthand" */
+/* 2. Icon is added using var(--icon-search) */
+
+/* Date & Time */
+/* :not() are needed to add Specificity and avoid !important on padding */
+input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]) {
+  &:is([type="datetime-local"], [type="month"], [type="time"], [type="week"]) {
+    --icon-position: 0.75rem;
+    --icon-width: 1rem;
+    background-image: var(--icon-date);
+    background-position: center right var(--icon-position);
+    background-size: var(--icon-width) auto;
+    background-repeat: no-repeat;
+    padding-inline-end: calc(var(--icon-width) + var(--icon-position));
+  }
+
+  /* Time */
+  &[type="time"] {
+    background-image: var(--icon-time);
+  }
+}
+
+/* Calendar picker */
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="time"],
+[type="week"] {
+  &::-webkit-calendar-picker-indicator {
+    width: var(--icon-width);
+    margin-inline: var(--icon-position) calc(var(--icon-width) * -1);
+    opacity: 0;
+  }
+}
+
+[dir="rtl"]
+  :is([type="date"], [type="datetime-local"], [type="month"], [type="time"], [type="week"]) {
+  text-align: right;
+}
