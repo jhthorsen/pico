@@ -41,8 +41,7 @@ p,
 pre,
 table,
 ul {
-  margin-top: 0;
-  margin-bottom: var(--typography-spacing-vertical);
+  margin-block: 0 var(--typography-spacing-vertical);
   color: var(--color);
   font-style: normal;
   font-weight: var(--font-weight);
@@ -101,7 +100,7 @@ a,
 
 /* Paragraphs */
 p {
-  margin-bottom: var(--typography-spacing-vertical);
+  margin-block-end: var(--typography-spacing-vertical);
 }
 
 /* Small */
@@ -111,13 +110,10 @@ small {
 
 /* Lists */
 :where(dl, ol, ul) {
-  padding-right: 0;
-  padding-left: var(--spacing);
-  padding-inline-start: var(--spacing);
-  padding-inline-end: 0;
+  padding-inline: var(--spacing) 0;
 
   li {
-    margin-bottom: calc(var(--typography-spacing-vertical) * 0.25);
+    margin-block-end: calc(var(--typography-spacing-vertical) * 0.25);
   }
 }
 
@@ -126,7 +122,7 @@ small {
 :where(dl, ol, ul) {
   :is(dl, ol, ul) {
     margin: 0; /* 1 */
-    margin-top: calc(var(--typography-spacing-vertical) * 0.25);
+    margin-block-start: calc(var(--typography-spacing-vertical) * 0.25);
   }
 }
 
@@ -136,24 +132,23 @@ ul li {
 
 /* Highlighted text */
 mark {
-  padding: 0.125rem 0.25rem;
   background-color: var(--mark-background-color);
   color: var(--mark-color);
   vertical-align: baseline;
+  padding-block: 0.125rem;
+  padding-inline: 0.25rem;
 }
 
 /* Blockquote */
 blockquote {
   display: block;
-  margin: var(--typography-spacing-vertical) 0;
+  margin-block: var(--typography-spacing-vertical);
+  margin-inline: 0;
   padding: var(--spacing);
-  border-right: none;
-  border-left: 0.25rem solid var(--blockquote-border-color);
-  border-inline-start: 0.25rem solid var(--blockquote-border-color);
-  border-inline-end: none;
+  border-inline: 0.25rem solid var(--blockquote-border-color) none;
 
   footer {
-    margin-top: calc(var(--typography-spacing-vertical) * 0.5);
+    margin-block-start: calc(var(--typography-spacing-vertical) * 0.5);
     color: var(--blockquote-footer-color);
   }
 }

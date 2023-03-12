@@ -22,7 +22,8 @@
 /* Cells */
 th,
 td {
-  padding: calc(var(--spacing) / 2) var(--spacing);
+  padding-block: calc(var(--spacing) / 2);
+  padding-inline: var(--spacing);
   border-bottom: var(--border-width) solid var(--table-border-color);
   color: var(--color);
   font-weight: var(--font-weight);

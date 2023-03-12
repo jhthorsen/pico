@@ -1,12 +1,13 @@
 :root {
-  --content-padding-top: 7rem;
+  --content-padding-block-start: 7rem;
   --content-max-width: 60em;
   --footer-height: 6rem;
-  scroll-padding-top: var(--content-padding-top);
+  scroll-padding-top: var(--content-padding-block-start);
 }
 
 .content-with-aside {
-  padding: var(--content-padding-top) var(--spacing) 20vh var(--spacing);
+  padding-block: var(--content-padding-block-start) 20vh;
+  padding-inline: var(--spacing);
   margin-inline: auto;
   max-width: var(--content-max-width);
   display: flex;
@@ -20,7 +21,8 @@
 
     li a {
       font-size: 0.9em;
-      padding: calc(var(--nav-link-spacing-vertical) / 2) calc(var(--nav-link-spacing-horizontal) * 2);
+      padding-block: calc(var(--nav-link-spacing-vertical) / 2);
+      padding-inline: calc(var(--nav-link-spacing-horizontal) * 2);
       color: var(--secondary);
     }
 
@@ -43,6 +45,6 @@
 @media (min-width: 45rem) {
   .content-with-aside > aside {
     position: sticky;
-    top: var(--content-padding-top);
+    top: var(--content-padding-block-start);
   }
 }

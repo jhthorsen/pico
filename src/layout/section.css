@@ -4,5 +4,5 @@
  */
 
 section {
-  margin-bottom: var(--block-spacing-vertical);
+  margin-block-end: var(--block-spacing-vertical);
 }

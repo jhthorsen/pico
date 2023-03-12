@@ -11,11 +11,12 @@
   background: var(--skip-nav-link-background-color, var(--primary));
   color: var(--skip-nav-link-color, var(--primary-inverse));
   text-decoration: none;
-  padding: var(--form-element-spacing-vertical) var(--form-element-spacing-horizontal);
+  padding-block: var(--form-element-spacing-vertical);
+  padding-inline: var(--form-element-spacing-horizontal);
   border: var(--border-width) solid var(--skip-nav-link-color, var(--primary-inverse));
   border-top: 0;
-  border-bottom-left-radius: var(--border-radius);
-  border-bottom-right-radius: var(--border-radius);
+  border-end-start-radius: var(--border-radius);
+  border-end-end-radius: var(--border-radius);
   position: absolute;
   left: var(--spacing);
   top: 0;

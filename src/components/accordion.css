@@ -4,8 +4,8 @@
 
 details {
   display: block;
-  margin-bottom: var(--spacing);
-  padding-bottom: var(--spacing);
+  margin-block-end: var(--spacing);
+  padding-block-end: var(--spacing);
   border-bottom: var(--border-width) solid var(--accordion-border-color);
 
   summary {
@@ -81,7 +81,7 @@ details {
   /* Open */
   &[open] {
     > summary {
-      margin-bottom: calc(var(--spacing));
+      margin-block-end: calc(var(--spacing));
 
       &:not([role]) {
         &:not(:focus) {

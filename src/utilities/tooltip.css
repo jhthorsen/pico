@@ -20,7 +20,8 @@
     position: absolute;
     bottom: 100%;
     left: 50%;
-    padding: .25rem .5rem;
+    padding-block: .25rem;
+    padding-inline: .5rem;
     overflow: hidden;
     transform: translate(-50%, -.25rem);
     border-radius: var(--border-radius);
@@ -42,9 +43,8 @@
   &::after {
     padding: 0;
     transform: translate(-50%, 0rem);
-    border-top: .3rem solid;
-    border-right: .3rem solid transparent;
-    border-left: .3rem solid transparent;
+    border-block-start: .3rem solid;
+    border-inline: .3rem solid transparent;
     border-radius: 0;
     background-color: transparent;
     content: "";
@@ -79,7 +79,7 @@
     &:after{
       transform: translate(.3rem, -50%);
       border: .3rem solid transparent;
-      border-left: .3rem solid;
+      border-inline-start: .3rem solid;
     }
   }
 
@@ -96,7 +96,7 @@
     &:after{
       transform: translate(-.3rem, -50%);
       border: .3rem solid transparent;
-      border-right: .3rem solid;
+      border-inline-end: .3rem solid;
     }
   }
 
