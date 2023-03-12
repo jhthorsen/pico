@@ -32,7 +32,7 @@ h6 {
   font-weight: 400;
   font-size: calc(var(--font-multiplier, 1) * 1rem);
   line-height: 1.1;
-  margin-block: 0.2em 0.85em;
+  margin-block: 0 0.85em;
 }
 
 /* Margin-top for headings after a typography block */
