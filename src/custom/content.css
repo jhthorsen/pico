@@ -42,6 +42,11 @@
     width: 30rem;
     flex-grow: 9999; /* make the main grow faster then aside */
   }
+
+  section {
+    max-width: calc(100vw - var(--spacing) * 2);
+    overflow-x: scroll;
+  }
 }
 
 /* 45rem = 30rem + 12rem + --spacing * 3 */
