@@ -29,20 +29,13 @@ nav {
     margin-block-end: 0;
     padding: 0;
     list-style: none;
-
-    &:first-of-type {
-      margin-inline-start: calc(var(--nav-element-spacing-horizontal) * -1);
-    }
-    &:last-of-type {
-      margin-inline-end: calc(var(--nav-element-spacing-horizontal) * -1);
-    }
   }
 
   li {
     display: inline-block;
     margin: 0;
     padding-block: var(--nav-element-spacing-vertical);
-    padding-inline: var(--nav-element-spacing-horizontal);
+    padding-inline: 0;
 
     /* Minimal support for buttons and forms elements */
     > * {
@@ -53,7 +46,7 @@ nav {
   :where(a, [role="link"]) {
     display: inline-block;
     margin-block: calc(var(--nav-link-spacing-vertical) * -1);
-    margin-inline: calc(var(--nav-link-spacing-horizontal) * -1);
+    margin-inline: 0;
     padding-block: var(--nav-link-spacing-vertical);
     padding-inline: var(--nav-link-spacing-horizontal);
     border-radius: var(--border-radius);
@@ -113,7 +106,7 @@ aside {
 
   li {
     padding-block: calc(var(--nav-element-spacing-vertical) * 0.5);
-    padding-inline: var(--nav-element-spacing-horizontal);
+    padding-inline: 0;
 
     a {
       display: block;

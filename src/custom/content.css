@@ -22,7 +22,6 @@
     li a {
       font-size: 0.9em;
       padding-block: calc(var(--nav-link-spacing-vertical) / 2);
-      padding-inline: calc(var(--nav-link-spacing-horizontal) * 2);
       color: var(--secondary);
     }
 
