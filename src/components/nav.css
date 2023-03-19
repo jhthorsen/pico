@@ -36,11 +36,11 @@ nav {
     margin: 0;
     padding-block: var(--nav-element-spacing-vertical);
     padding-inline: 0;
+  }
 
-    /* Minimal support for buttons and forms elements */
-    > * {
-      --spacing: 0;
-    }
+  /* Minimal support for buttons and forms elements */
+  form {
+    --spacing: var(--nav-form-spacing, 0);
   }
 
   :where(a, [role="link"]) {
@@ -105,7 +105,7 @@ aside {
   }
 
   li {
-    padding-block: calc(var(--nav-element-spacing-vertical) * 0.5);
+    padding-block: var(--nav-element-spacing-vertical);
     padding-inline: 0;
 
     a {

@@ -42,7 +42,26 @@ nav[aria-label="Primary"] {
   }
 
   .brand {
-    color: var(--color);
+    color: var(--text-color);
     margin-inline-start: calc(var(--nav-element-spacing-horizontal) * -1);
+
+    &:before {
+      background-color: hsla(var(--primary-600--hsl), 0.15);
+      font-family: var(--font-family-mono);
+      content: 'Z';
+      color: var(--primary);
+      line-height: 1;
+      padding-inline: 0.6em;
+      padding-block: 0.4em;
+      margin-inline-end: 0.5em;
+      border: 2px solid var(--primary);
+      border-start-start-radius: 30%;
+      border-end-end-radius: 30%;
+      display: inline-block;
+    }
+
+    &:hover {
+      color: var(--color);
+    }
   }
 }
