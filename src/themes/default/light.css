@@ -1,7 +1,6 @@
 :root {
-  --background-color: var(--grey-50);
-
-  --color: var(--grey-700);
+  --body-background-color--hsl: hsl(var(--grey-50--hsl));
+  --text-color--hsl: hsl(var(--grey-700--hsl));
   --muted-color: var(--grey-500);
   --muted-border-color: var(--grey-50);
 

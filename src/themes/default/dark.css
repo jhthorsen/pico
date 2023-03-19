@@ -1,7 +1,6 @@
 :root[data-theme="dark"] {
-  --background-color: var(--grey-900);
-
-  --color: var(--grey-200);
+  --body-background-color--hsl: hsl(var(--grey-900--hsl));
+  --text-color--hsl: hsl(var(--grey-200--hsl));
   --muted-color: var(--grey-500);
   --muted-border-color: var(--grey-900);
 

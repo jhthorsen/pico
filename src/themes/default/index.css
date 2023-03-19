@@ -59,6 +59,9 @@
   --red-800--hsl: #c62828;
   --red-900--hsl: #b71c1c;
 
+  --background-color: var(--body-background-color, var(--white));
+  --color: var(--text-color, var(--black));
+
   --font-family-mono: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace",
     "Noto Mono", "Oxygen Mono", "Liberation Mono", "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", monospace;
