@@ -24,13 +24,19 @@ const postcssColorVariableShorthand = {
         });
       }
 
-      const hsl = Color(value).hsl().array();
+      const hsl = value === 'hsl(0)' ? [] : Color(value).hsl().array();
       for (let i = 0; i < hsl.length; i++) {
         hsl[i] = prop[i] ? prop[i] : hsl[i].toFixed(3);
       }
 
-      decl.value = `${hsl[0]}, ${hsl[1]}%, ${hsl[2]}%`;
-      decl.after(decl.prop.replace(/--hsl$/, '') + `: hsl(var(${decl.prop}))`);
+      if (hsl.length === 3) {
+        decl.value = `${hsl[0]}, ${hsl[1]}%, ${hsl[2]}%`;
+        decl.after(decl.prop.replace(/--hsl$/, '') + `: hsl(var(${decl.prop}))`);
+      }
+      else if (prop.length == 1) {
+        decl.value = prop[0];
+        decl.after(decl.prop.replace(/--hsl$/, '') + `: hsl(var(${decl.prop}))`);
+      }
     }
     catch (err) {
       console.warn(decl.prop + ': ' + err);
