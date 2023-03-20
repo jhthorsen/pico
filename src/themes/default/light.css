@@ -2,7 +2,7 @@
   --body-background-color--hsl: hsl(var(--grey-50--hsl));
   --text-color--hsl: hsl(var(--grey-700--hsl));
   --muted-color: var(--grey-500);
-  --muted-border-color: var(--grey-50);
+  --muted-border-color: var(--grey-200);
 
   --primary: var(--primary-600);
   --primary-hover: var(--primary-700);
@@ -62,7 +62,7 @@
   --table-border-color: var(--muted-border-color);
   --table-row-striped-background-color: hsla(var(--grey-100--hsl), 0.7);
 
-  --code-background-color: var(--grey-50);
+  --code-background-color: var(--grey-100);
   --code-color: var(--muted-color);
   --code-kbd-background-color: var(--contrast);
   --code-kbd-color: var(--contrast-inverse);
@@ -89,13 +89,13 @@
     calc(var(--box-shadow-elevation) * 0.5 * 0.417) calc(var(--box-shadow-elevation) * 0.417) calc(var(--box-shadow-blur-strengh) * 0.417) hsla(var(--black--hsl), calc(var(--box-shadow-opacity) * 0.717)),
     calc(var(--box-shadow-elevation) * 0.5) var(--box-shadow-elevation) var(--box-shadow-blur-strengh) hsla(var(--black--hsl), var(--box-shadow-opacity)),
     0 0 0 0.0625rem hsla(var(--black--hsl), calc(var(--box-shadow-opacity) * 0.25));
-  --card-sectionning-background-color: var(--grey-50);
+  --card-sectionning-background-color: var(--grey-100);
 
-  --dropdown-background-color: var(--grey-50);
-  --dropdown-border-color: var(--grey-100);
+  --dropdown-background-color: var(--grey-100);
+  --dropdown-border-color: var(--grey-200);
   --dropdown-box-shadow: var(--card-box-shadow);
   --dropdown-color: var(--color);
-  --dropdown-hover-background-color: var(--grey-50);
+  --dropdown-hover-background-color: var(--grey-200);
 
   --modal-overlay-background-color: var(--grey-100);
 

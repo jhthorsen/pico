@@ -1,8 +1,8 @@
 :root[data-theme="dark"] {
-  --body-background-color--hsl: hsl(var(--grey-900--hsl));
+  --body-background-color--hsl: hsl(var(--grey-hue), 30%, 10%);
   --text-color--hsl: hsl(var(--grey-200--hsl));
   --muted-color: var(--grey-500);
-  --muted-border-color: var(--grey-900);
+  --muted-border-color: var(--grey-600);
 
   --primary: var(--primary-600);
   --primary-hover: var(--primary-500);

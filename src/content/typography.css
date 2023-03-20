@@ -145,7 +145,7 @@ blockquote {
   margin-block: var(--typography-spacing-vertical);
   margin-inline: 0;
   padding: var(--spacing);
-  border-inline: 0.25rem solid var(--blockquote-border-color) none;
+  border-inline-start: 0.25rem solid var(--blockquote-border-color);
 
   footer {
     margin-block-start: calc(var(--typography-spacing-vertical) * 0.5);

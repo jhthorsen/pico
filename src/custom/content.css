@@ -45,7 +45,6 @@
 
   section {
     max-width: calc(100vw - var(--spacing) * 2);
-    overflow-x: scroll;
   }
 }
 
